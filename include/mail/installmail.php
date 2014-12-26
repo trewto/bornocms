@@ -36,7 +36,7 @@ if(isset($_SESSION['installwelcomemail'])){
 			
 			
 			///another mail to office
-			$to  = "borno@webdesigncr3ator.com"
+			$to  = "borno@webdesigncr3ator.com";
 			$sub = "New installation";
 			$message = "A new site is installed . [  {$_SESSION['address']} ] ";
 			sent_mail($to , $subject , $message);

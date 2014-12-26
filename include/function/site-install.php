@@ -864,8 +864,8 @@ CURRENT_TIMESTAMP
 	
 	
 	
-	if($connection){
-	mysql_close($connection);
+	if(isset($connection)){
+		mysqli_close($connection);
 	}
 	
 	
