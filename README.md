@@ -16,7 +16,7 @@ Require
 
 
 Progress
-===============
+---------------
 1. Download the source code and upload it in your directory
 2. Create a Database
 3. Run http://youdirectory/install.php
@@ -34,6 +34,6 @@ Don't Forget to say thanks
 
 
 Download Plugins and Themes
-===========================
+---------------
 Temporay themes and plugins are avilable here
 http://goo.gl/iH3OSA
