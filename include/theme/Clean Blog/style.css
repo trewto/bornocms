@@ -1,0 +1,75 @@
+/*
+
+	Theme Name: Clean Blog
+
+*/
+
+@font-face {
+  font-family: 'open-san';
+  font-style: normal;
+  font-weight: 400;
+  src: local('open-san'), local('open-san'), url(fonts/open-san.woff) format('woff');
+}
+
+
+
+body , input , textarea{
+  font-family: 'open-san',Siyam Rupali;
+
+}
+
+/* Comment */
+.avatar {
+     float: left;
+     overflow: hidden;
+}
+
+.comment-data {
+     overflow: hidden;
+}
+
+.comment li {
+     list-style:none;
+     margin-bottom:5px;
+     padding: 3px;
+}
+.comment-content{
+	margin:0 0 0 75pt;
+}
+
+.ray {
+     background: none repeat scroll 0% 0% red;
+     margin-left: 75px;
+     margin-top: 10px;
+     position: relative;
+}
+.ray span.arrow {
+     border-bottom: 24px solid #FFFFFF;
+     border-right: 25px solid #EFEFEF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 23px;
+     width: 0pt;
+}
+.ray span.arrows {
+     border-right: 25px solid #EFEFEF;
+    border-top: 24px solid #FFFFFF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 0px;
+     width: 0pt;
+}
+
+.comment-content{
+	border:1px solid #f1f1f1;
+	min-height:45px;
+	padding:12px;
+}
+
+.avatar{
+	float:left;
+	width:60px;
+	height:60px;
+}

@@ -1,0 +1,171 @@
+/*
+*	Theme Name : Borno Docu
+*	Author : Trewto Roy
+*	Detail : A doucumentionable theme
+*/
+
+body , header , footer , div , span , table{
+	padding:0;
+	margin:0;
+}
+#content{
+	margin:0 auto ; 
+	max-width:960px;
+}
+
+
+.widget{
+	margin-bottom:15px;
+}
+
+.widget_title{
+	border-bottom:0.10px solid #ccc;
+}
+
+#mainarea{
+	overflow:hidden;
+}
+
+/*
+*	Necessary CSS
+*
+*/
+
+
+input[type='text'],input[type='password']  ,textarea{
+  display: block;
+  max-width: 100%;
+
+
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+input[type='text']:focus ,textarea:focus ,input[type='password']:focus{
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+input[type='text']::-moz-placeholder ,textarea::-moz-placeholder,input[type='password']::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+input[type='text']:-ms-input-placeholder  ,textarea:-ms-input-placeholder,input[type='password']:-ms-input-placeholder{
+  color: #999;
+}
+input[type='text']::-webkit-input-placeholder ,textarea::-webkit-input-placeholder,input[type='password']-webkit-input-placeholder{
+  color: #999;
+}
+
+
+
+
+
+
+/* Comment */
+.avatar {
+     float: left;
+     overflow: hidden;
+}
+
+.comment-data {
+     overflow: hidden;
+}
+
+.comment li {
+     list-style:none;
+     margin-bottom:5px;
+     padding: 3px;
+}
+.comment-content{
+	margin:0 0 0 75pt;
+}
+
+.ray {
+     background: none repeat scroll 0% 0% red;
+     margin-left: 75px;
+     margin-top: 10px;
+     position: relative;
+}
+.ray span.arrow {
+     border-bottom: 24px solid #FFFFFF;
+     border-right: 25px solid #EFEFEF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 23px;
+     width: 0pt;
+}
+.ray span.arrows {
+     border-right: 25px solid #EFEFEF;
+    border-top: 24px solid #FFFFFF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 0px;
+     width: 0pt;
+}
+
+.comment-content{
+	border:1px solid #f1f1f1;
+	min-height:45px;
+	padding:12px;
+}
+
+.avatar{
+	float:left;
+	width:60px;
+	height:60px;
+}
+
+
+.widget_content input{
+
+  margin : auto ;
+}
+
+.widget_content ul li{
+	list-style:none;
+}
+
+.popularlist li{
+	list-style:none;
+
+}
+/* sign in widget style */
+
+.sign_in_widget{
+	text-align:center;
+}
+.loggedinwidget{
+	overflow:hidden;
+	padding:9px;
+
+}
+.loggedinavatar{
+	float:left;
+	width:60px;
+	height:60px;
+	padding:5px;
+	border:1px solid #ccc;
+
+	background:white;
+}
+.loggedinwidget p{
+     margin: 0pt 0pt 0pt 60pt;
+}
+
+
+#c-t-area{
+	width:99% ;
+}

@@ -1,0 +1,398 @@
+/*
+Theme Name: WB 1
+Author: Trewto Roy
+
+*/
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+     border: 0px none;
+     margin: 0px;
+     padding: 0px;
+     vertical-align: baseline;
+	word-wrap:break-word;
+
+	 
+}
+
+body{
+	background:url(bg.jpg	);
+}
+img { max-width: 99%; height: auto; }
+
+::selection { background: #D66017; color: #fff; }
+::-moz-selection { background: #D66017; color: #fff; }
+
+
+@font-face {
+  font-family: 'open-san';
+  font-style: normal;
+  font-weight: 400;
+  src: local('open-san'), local('open-san'), url(fonts/open-san.woff) format('woff');
+}
+
+
+
+body , input , textarea,submit,buttom{
+  font-family: 'open-san';
+}
+
+
+a{
+	color: #EF991A;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#EFAD2E;
+}
+
+#mainarea{
+	width:960px;
+	margin:0 auto ; 
+}
+
+#header1{
+	padding:15px;
+	background:black;
+	color:white;
+	overflow:hidden;
+}
+#header1 a{
+	color:white;
+}
+
+#header1 .name{
+	float:left;
+	width:600px;;
+}
+#header1 .search{
+	float:right;
+	width:200px;
+}
+#header1 .search input{
+	width:160px;
+	margin-top:9px;
+}
+#header2{
+	overflow:hidden;
+	background:#DA6218;
+	padding:9px;
+	padding-left:19px;
+	padding-right:19px;
+	font-size:18px;
+	font-weight:bold;
+	color:white;
+	margin-left: -10px; 
+	margin-right: -10px; 
+}
+
+#primary{
+	width:580px;
+	float:left;
+}
+#sidebar{
+	width:320px;
+	float:right;
+}
+
+#contentarea{
+	background:white;
+	padding:20px;
+	padding-top:30px;
+	overflow:hidden;
+}
+
+.article{
+	padding-bottom:20px;
+	margin-bottom:20px;
+	border-bottom:1px solid #ccc;
+}
+.widget ul li {
+	list-style:none;
+}
+.widget{
+	margin-bottom:25px;
+}
+
+.widget .title {
+		text-transform:uppercase;
+		margin-bottom:10px;
+		font-size:15px;
+
+}
+
+.buttonx {
+	background:#DA6218;
+	color:white;
+	padding:7px;
+	margin:2px;
+}
+.buttonx:hover{
+	color:white;
+}
+.event{
+	background:#DA6218;
+	color:white;
+	padding:10px;
+}
+#bigfoot {
+	min-height:100%;
+}
+
+.mainfoot{
+	margin:0 auto ;
+	color:white;
+	width:950px;
+	background:black;
+	padding:5px;
+	text-align:center;
+}
+
+
+
+
+/*input*/
+
+input[type='text'],input[type='password']{
+	padding:5px;
+	margin:auto;
+	margin:2px;
+	border:1px solid #ccc;
+	width:96%;
+}
+input[type='text']:focus,input[type='password']:focus{
+	border:1px solid #DA6218;
+}
+
+
+input[type="submit"],button {
+	background:#DA6218;
+	color:white;
+	border:0px;
+	padding:5px;
+	padding-bottom:7px;
+	padding-left:10px;
+	padding-right:10px;
+}
+input[type="submit"]:hover,button:hover{
+	background:#d1590f;
+}
+
+.main_content ul li {
+	list-style:square;
+	margin-left:30px;
+}
+
+textarea{
+	width:99%;
+	max-width:99s%;
+	border:1px solid #ccc;
+}
+
+/* login widget */
+
+
+.sign_in_widget{
+	text-align:center;
+}
+.loggedinwidget{
+	overflow:hidden;
+	padding:9px;
+
+}
+.loggedinavatar{
+	float:left;
+	width:60px;
+	height:60px;
+	padding:5px;
+	border:1px solid #ccc;
+	background:white;
+}
+.loggedinwidget p{
+     margin: 0pt 0pt 0pt 60pt;
+}
+
+
+
+
+/* Comment */
+.avatar {
+     float: left;
+     overflow: hidden;
+}
+
+.comment-data {
+     overflow: hidden;
+}
+
+.comment li {
+     list-style:none;
+     margin-bottom:5px;
+     padding: 3px;
+}
+.comment-content{
+	margin:0 0 0 75pt;
+}
+
+.ray {
+     background: none repeat scroll 0% 0% red;
+     margin-left: 75px;
+     margin-top: 10px;
+     position: relative;
+}
+.ray span.arrow {
+     border-bottom: 24px solid #FFFFFF;
+     border-right: 25px solid #EFEFEF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 23px;
+     width: 0pt;
+}
+.ray span.arrows {
+     border-right: 25px solid #EFEFEF;
+    border-top: 24px solid #FFFFFF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 0px;
+     width: 0pt;
+}
+
+.comment-content{
+	border:1px solid #f1f1f1;
+	min-height:45px;
+	padding:12px;
+}
+
+.avatar{
+	float:left;
+	width:60px;
+	height:60px;
+}
+
+
+/*
+*
+*	Responsive
+*/
+
+
+
+
+
+/* Default Layout: 960px.  */
+
+
+
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	#mainarea{
+		max-width:768px;
+	}
+	.header .content{
+		max-width:768px;
+	}
+	
+	#sidebar{
+		max-width:270px;
+	}
+	
+	#primary{
+		max-width:450px;
+	
+	}
+	.article{
+		
+	}
+	.mainfoot{
+		max-width:768px;
+	}
+	#header1 .name{
+		width:70%;
+	}
+	#header1 .search{
+		width:30%;
+	}
+}
+
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+	#mainarea{
+		max-width:320px;
+	}
+	.header .content{
+		max-width:320px;
+	}
+	
+	#contentarea #sidebar{
+		
+		width:300px;
+		width:99%;
+		float:none
+		;margin-top:50px;
+	}
+	
+	#contentarea #primary{
+		max-width:300px;
+		float:none;
+				width:99%;
+
+	}
+	.article{
+		width:100%;
+	}
+	#headerform #mainsearchbar{
+		width:305px;
+	}
+	.mainfoot{
+		max-width:320px;;
+	}
+	#header1 input {
+		display:none;
+	}
+}
+
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#mainarea{
+		max-width:480px;
+	}
+	.header .content{
+		max-width:480px;
+	}
+	
+	#contentarea #sidebar {
+		
+		width:440px; 
+		margin-top:50px;
+	
+	}
+	
+	#contentarea #primary{
+		max-width:440px;
+		float:none;
+	}
+	.article{
+		width:100%;
+	}
+	#headerform #mainsearchbar{
+		width:465px;
+	}
+	.mainfoot{
+		max-width:480px;
+	}
+	#header1 input {
+		display:none;
+	}
+
+}
+

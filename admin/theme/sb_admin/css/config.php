@@ -1,0 +1,1 @@
+<?php	/*	*	*	It is necessary config fie. When you include function.php file , you must provide config.php file also	*	*/	include('../../../../config.php');?>
