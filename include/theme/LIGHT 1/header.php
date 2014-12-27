@@ -4,8 +4,8 @@
 	<title><?php echo $title ; ?></title>
 	<meta charset="UTF-8">
 	<!-- bootstrap css-->
-	<link rel='stylesheet' href="<?php echo theme_directory() ;?>/bootstrap/css/bootstrap.css">
-	<link rel='stylesheet' href="<?php echo theme_directory() ;?>/bootstrap/css/bootstrap-responsive.css">
+	<link rel='stylesheet' href="<?php echo theme_directory() ;?>/bootstrap/css/bootstrap.min.css">
+	<link rel='stylesheet' href="<?php echo theme_directory() ;?>/bootstrap/css/bootstrap-responsive.min.css">
 	<!-- bootstrap css end-->
 	
 	<!-- custom css-->
@@ -13,8 +13,7 @@
 	<!-- custom css end-->
 	
 	<!-- bootstrap js-->
-	<script type="text/javascript" src="<?php echo theme_directory() ;?>/bootstrap/js/jquery.js"></script>
-	<script type="text/javascript" src="<?php echo theme_directory() ;?>/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="<?php echo theme_directory() ;?>/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- bootstrap js end-->
 	
