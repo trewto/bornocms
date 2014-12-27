@@ -10,10 +10,10 @@
 	
 	
 	/*	Disable error reporting  */
-	//	error_reporting(0);
+		error_reporting(0);
    
    
-   /* security package */
+   	/* security package */
 	require_once('include/function/security.php');//opening the security.php , security file . 
 
 	/* site-installer package */
