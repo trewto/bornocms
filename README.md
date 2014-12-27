@@ -127,7 +127,10 @@ Photos
     photo capabilites
     Gellary
 
+
+
 Also:
+
     GOOGLE ALALYTIC
     RSS FEED
     BULID IN CONTACT FORM
