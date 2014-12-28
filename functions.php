@@ -23,5 +23,4 @@
 	 *
 	 */
 	
-		include("copyright.php");
 		include('load.php');

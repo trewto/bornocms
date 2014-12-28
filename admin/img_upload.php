@@ -5,10 +5,7 @@
 */
 
 require('admin-functions.php');
-include('ImgUploader.class.php');
-if($lck->PHOTO!=1){
-	borno_die("You need pro version to access it");
-}
+
 
 
 
