@@ -5,9 +5,7 @@
 *	Image Gellary 
 */
 require('admin-functions.php');
-if($lck->PHOTO!=1){
-	borno_die("You need pro version to access it");
-}
+
 
 
  ?>

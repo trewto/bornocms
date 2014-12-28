@@ -96,17 +96,3 @@
 		die($die);
 		exit();
 	}
-	
-
-
-	//copyright key 
-	$ck  =  "p4k3m3y3r3g3p4e33524u4m4w3";
-	//no key found
-	$mgk_1 = "05g4a2r3a4a4n5l4z5l4g5x5c4s5e482k4e4v4h284w536i464c2";////msg 1
-	//invalid key 
-	$mgk_2 = "v4f4o464h4c4i5a2q58446";
-	//need proc_close
-	$mgk_3 = "b5g4n4d2j484j564n3j4x5s5b2z554i4s4i4l4n4a216x5c23464j5d4m4x5l3a406";
-
-	
-		

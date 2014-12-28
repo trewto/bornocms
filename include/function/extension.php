@@ -97,18 +97,6 @@ global $prefix_content;
 
 
 
-function encode14($x){
-	return x0012x9($x);
-}
-
-
-
-function decode14($x){
-	return x012x29($x);
-}
-
-
-
 
 
 
@@ -124,7 +112,6 @@ function decode14($x){
 ////////////////s////////////////////////
 ////insert version info
 ////
-require("copyright-ck.php");
 
 require('version.php');
 require('plugin.php');

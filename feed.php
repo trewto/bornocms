@@ -7,9 +7,6 @@
 include('functions.php');
 include('include/function/feed_class.php');
 
-if($lck->FEED!=1){
-	borno_die("You need pro version to access it");
-}
 
 $sSQL = borno_query("SELECT * FROM prefix_content Where post_status='publish' and post_level ='public' ORDER BY `id` DESC  LIMIT 0 , 10");
 
