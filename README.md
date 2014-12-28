@@ -175,5 +175,7 @@ Don't Forget to say thanks
 
 Download Plugins and Themes
 ---------------
-Temporay themes and plugins are avilable here
+Temporay themes and plugins are avilable here  - 
 http://goo.gl/iH3OSA
+
+
