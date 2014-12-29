@@ -1,1 +1,1 @@
-{"version":"1.0","update":["include\/function\/example1.php","include\/function\/example2.php"],"create":["include\/function\/example5.php","include\/function\/example6.php"],"remove":["include\/function\/example3.php","include\/function\/example4.php"]}
+{"version":"1.0","update":["load.php"],"create":["output.php"],"remove":["temp.php"]}
