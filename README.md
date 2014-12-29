@@ -1,7 +1,6 @@
 Borno CMS
 ================
-
-This is the free version of Borno CMS
+Borno is an opensource content management system
 
 Feature
 -------------
