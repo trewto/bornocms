@@ -62,7 +62,7 @@ string $comment;
 			$errorsp = array();
 			$vaiidthemename = array();
 			$tfile = array();
-			$filearea = '../include/theme/';
+			$filearea = '../portable/theme/';
 				for( $i = 0; $i < $newtheme->numFiles; $i++ ){
 				
 					$stat = $newtheme->statIndex( $i );
@@ -120,7 +120,7 @@ string $comment;
 
 					//var_dump($tfile);
 					if(count($errorsp)==0){
-				 $t = $newtheme->extractTo('../include/theme');
+				 $t = $newtheme->extractTo('../portable/theme');
 				 }else{
 				  $newtheme->close();
 					$error_sp_im = implode('<br>',$errorsp);

@@ -609,14 +609,14 @@ if(defined("INCLUDE_THEME")){
 
 $theme_directory = get_the_option('theme_folder_name'); 
 if(is_admin()){
-	if(file_exists('../include/theme/'.$theme_directory.'/functions.php')){
-		include('../include/theme/'.$theme_directory.'/functions.php');//include the function file
+	if(file_exists('../portable/theme/'.$theme_directory.'/functions.php')){
+		include('../portable/theme/'.$theme_directory.'/functions.php');//include the function file
 	}
 
 }
 else{
-	if(file_exists('include/theme/'.$theme_directory.'/functions.php')){
-			include('include/theme/'.$theme_directory.'/functions.php');//include the function file
+	if(file_exists('portable/theme/'.$theme_directory.'/functions.php')){
+			include('portable/theme/'.$theme_directory.'/functions.php');//include the function file
 		}
 
 }
@@ -629,13 +629,13 @@ else{
 *
 */
 if(defined("INCLUDE_THEME")){
-	if(	file_exists('include/theme/'.$theme_directory.'/'.$include)){
+	if(	file_exists('portable/theme/'.$theme_directory.'/'.$include)){
 
-		include('theme/'.$theme_directory.'/'.$include);
+		include('portable/theme/'.$theme_directory.'/'.$include);
 
 	}
 	else{
-			include('theme/'.$theme_directory.'/index.php');
+			include('../portable/theme/'.$theme_directory.'/index.php');
 
 	}
 

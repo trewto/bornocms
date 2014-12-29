@@ -38,7 +38,7 @@ $plugok = false;
 		//if error not found 
 		else
 		{
-			var_dump($_FILES);
+			//var_dump($_FILES);
 			if(!$_FILES['file']['type']=='application/zip'){
 				//var_dump($_FILES['file']);
 				borno_die('Not a valid zip file');
@@ -61,7 +61,7 @@ string $comment;
 			$errorsp = array();
 			$vaiidpluginname = array();
 			$tfile = array();
-			$filearea = '../include/plugin/';
+			$filearea = '../portable/plugin/';
 				for( $i = 0; $i < $newplugin->numFiles; $i++ ){
 				
 					$stat = $newplugin->statIndex( $i );
@@ -114,7 +114,7 @@ string $comment;
 				
 					//var_dump($tfile);
 					if(count($errorsp)==0){
-				 $t = $newplugin->extractTo('../include/plugin');
+				 $t = $newplugin->extractTo('../portable/plugin');
 				 }else{
 				  $newplugin->close();
 					$error_sp_im = implode('<br>',$errorsp);
@@ -131,7 +131,7 @@ string $comment;
 					 *
 					 /* */
 					 //////////working
-					borno_die('pluin successfully uploaded','Success');
+					borno_die('Plugin successfully uploaded','Success');
 				 }
 				
 					

@@ -10,7 +10,8 @@
 	
 	
 	/*	Disable error reporting  */
-		error_reporting(0);
+		
+	
    
    
    	/* security package */
@@ -28,5 +29,10 @@
 	/* theme package */
 	if(file_exists('config.php'))
 	require_once('include/theme-opener.php');
+	
+	
+	if(!defined("MODE") or (!MODE=="DEVELOPMENT")){	
+		error_reporting(0);
+	}
 
 	
