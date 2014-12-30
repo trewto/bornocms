@@ -58,25 +58,7 @@
 
 	   	<div class="row">    		            
 
-			  <!-- 	<ul id="nav" class="nav">
-			      	<li class="current"><a href="index.html">Home</a></li>
-			      	<li class="has-children"><a href="#">Dropdown</a>
-	                  <ul>
-	                     <li><a href="#">Submenu 01</a></li>
-	                     <li><a href="#">Submenu 02</a></li>
-	                     <li><a href="#">Submenu 03</a></li>
-	                  </ul>
-	               </li>
-	               <li><a href="demo.html">Demo</a></li>	
-	               <li><a href="archives.html">Archives</a></li>
-			      	<li class="has-children"><a href="single.html">Blog</a>
-							<ul>
-	                     <li><a href="blog.html">Blog Entries</a></li>
-	                     <li><a href="single.html">Single Blog</a></li>	                     
-	                  </ul>
-			      	</li>		      	
-			      	<li><a href="page.html">Page</a></li> -- >
-			   	</ul> <!-- end #nav -->			   	 
+					   	 
 			<?php
 			//view_menu($ul_class='mainul nav',$main_li_class='mainli',$main_li_sub='',$sub_ul_class='subul',$sub_li_class='subli nav',$deep_ul_class='nav deel_ul',$deel_li_class='deep_li')
 			
