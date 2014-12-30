@@ -1,0 +1,50 @@
+/*
+	Theme Name: Keep It simple 20
+	Detail: Keep it 20 is a responsive theme
+
+*/
+/* sign in widget style */
+.sign_in_widget{
+	text-align:center;
+}
+.loggedinwidget{
+	overflow:hidden;
+	padding:9px;
+
+}
+.loggedinavatar{
+	float:left;
+	width:60px;
+	height:60px;
+	padding:5px;
+	border:1px solid #ccc;
+
+	background:white;
+}
+.loggedinwidget p{
+     margin: 0pt 0pt 0pt 60pt;
+}
+
+.widget_content input[type="text"],.widget_content input[type="password"]{
+	width:99%;
+}
+
+.com-l{
+	text-align:left;
+	float:left;
+	overflow:hidden;
+	
+}
+
+
+
+
+
+.admin_author {
+	font-weight:bold;
+}
+.admin_author a,.admin_author a:hover{
+	
+
+}
+

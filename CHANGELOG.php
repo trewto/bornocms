@@ -1,18 +1,30 @@
 <?php
 	/*
-		THIS IS THE CHAGELOG FILE
-		Credit and activity
+		THIS IS THE CHANGELOG FILE
+		Source & Credit & Activity 
 	
 	
-	PR.1	- First released : Author: Trewto Roy <trewtone@gmail.com>
-			- Thanks to the author of "Sb admin", opensource theme
-			- Thanks Zonayed Ahamed to develop Borno Metro
-			- Thanks Zero Man for support
-			- We use tinymce and ck editor
-			- We develop our core by Twitter bootstrap
-			- We use Feed class Written by Vagharshak Tozalakyan <vagh@armdex.com>
-			- We use img class developed by Michael Diamond (http://www.DigitalGemstones.com)
-			- We use the backup class from google code
+	
+			#Source and credit 
+			- Twitter Bootstrap <getbootstrap.com>
+			- Sb admin <startbootstrap.com/template-overviews/sb-admin/>
+			- Open Sans <www.google.com/fonts/specimen/Open+Sans>
+			- Tinymce <www.tinymce.com/>
+			- Ck editor <ckeditor.com/>
+			- Jquery  <jquery.com/>
+			- RSS Feed class Written by Vagharshak Tozalakyan <vagh@armdex.com>
+			- Image uploder class developed by Michael Diamond (http://www.DigitalGemstones.com)
+			- Borno Metro < Zonayed ahamed : https://www.facebook.com/profile.php?id=100002080934861>
+			- BackupDB class <http://www.w3bees.com/2013/02/backup-mysql-database-with-php.html>
+			- Clean Blog <startbootstrap.com/template-overviews/clean-blog/>
+			- Keep it 20 <http://c5mix.com/blog/themes/keep-it-simple-theme-for-concrete5>
+			
+			
+		###VERSION 
+			1.0 = > Starting Point
+			
+			
+			
 	
 	*/	
 ?>

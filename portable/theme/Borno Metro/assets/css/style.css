@@ -1,0 +1,27 @@
+a {
+ color: #333;
+}
+.headerbar {
+ /*padding: 50px 0;*/
+}
+.ads {
+ margin-top: 27px;
+}
+.sidebar {
+ padding: 0 26px;
+}
+.author-avatar {
+ padding: 0 15px;
+}
+.footerbar {
+ margin-top: 25px;
+ padding: 7px 0;
+ color: #fff;
+ background-color: #0066cc;
+}
+.panel-body {
+ color: #333;
+}
+.Error h1 {
+ font-size: 150px;
+}

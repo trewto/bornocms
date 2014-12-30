@@ -256,7 +256,9 @@ if(get_the_option('pendingpost')=='false'){
 	update_metas($go_id);
 ;
 		if(get_the_post($go_id , 'post_status')=='publish'){
-			borno_die("Content successfully publish <a href='" . the_post_link($go_id,false)."'>View</a>" ,'Done');
+		//	borno_die("Content successfully publish <a href='" . the_post_link($go_id,false)."'>View</a>" ,'Done');
+			header("Location:".admin_url()."/?pages=editor&edit_id={$go_id}&msg=nw");
+							
 		}else{
 			borno_die('Your content is been Progressed','The post is Progressed');
 		}
@@ -385,9 +387,12 @@ if(get_the_option('pendingpost')=='false'){
 							
 							update_metas($row['id']);
 							
-						echo ( '<div class="alert alert-success">You successfully edited the post 
+							/*echo ( '<div class="alert alert-success">You successfully edited the post 
 							<a href="'.the_post_link($row['id'],false).'"  target="_blank" class="btn btn-success" style="background:green;color:white;text-decoration:none;border-radius:5px;padding:2px;">View Post</a>
-							</div>');
+							</div>');*/
+							
+							header("Location:".admin_url()."/?pages=editor&edit_id={$row['id']}&msg=edt");
+							
 						}
 						else{
 						borno_die( '//error no post in this name//');
@@ -546,7 +551,21 @@ with (thisform)
 		if($submit_key=='submit' and !user_can('new_post')){
 			borno_die('You can not add a new post');
 		}
-
+		
+		if(isset($_GET['msg']) && $edited_id!=0){
+			if($_GET['msg']=='edt'){
+					echo ( '<div class="alert alert-success">You successfully edited the post 
+							<a href="'.the_post_link($edited_id,false).'"  target="_blank" class="btn btn-success" style="background:green;color:white;text-decoration:none;border-radius:5px;padding:2px;">View Post</a>
+							</div>');
+				}
+			if($_GET['msg']=='nw'){
+					echo ( '<div class="alert alert-success">You successfully added the post 
+							<a href="'.the_post_link($edited_id,false).'"  target="_blank" class="btn btn-success" style="background:green;color:white;text-decoration:none;border-radius:5px;padding:2px;">View Post</a>
+							</div>');
+				}
+			
+		
+		}
 ?>
 
 <form method="POST" action="" onsubmit="return validate_form(this);">

@@ -169,7 +169,7 @@ if(isset($permalinks[0]) and isset($permalinks[1])){
 		
 		
 		case('doc'):
-			$_GET['doc']  = permalink_to_doc_id($permalinks[1]);
+		  	$_GET['doc']  = permalink_to_doc_id($permalinks[1]);
 			//$_GET['doc'] = $_GET['doc'] ? $_GET['p'] : $permalinks[1] ; 
 		break;
 		
@@ -400,7 +400,7 @@ $title =get_the_option('site_name').' | '.get_the_option('site_description');
 	}
 }*/
 else if(isset($_GET['doc'])){
-	if($_GET['doc']=='list'){
+	if($_GET['doc']==='list'){ 
 		$include=('doc.php');
 		$title ='Document Map';
 		$function_page = 'doc';
@@ -469,6 +469,7 @@ else if(isset($_GET['userpost'])){
 	}
 }*/
 else{
+	//var_dump($_GET);
 	$title =get_the_option('site_name').' | '.get_the_option('site_description');
 	$include=('index.php');
 	$function_page = 'home';
@@ -630,12 +631,11 @@ else{
 */
 if(defined("INCLUDE_THEME")){
 	if(	file_exists('portable/theme/'.$theme_directory.'/'.$include)){
-
 		include('portable/theme/'.$theme_directory.'/'.$include);
 
 	}
-	else{
-			include('../portable/theme/'.$theme_directory.'/index.php');
+	else{ 
+			include('portable/theme/'.$theme_directory.'/index.php');
 
 	}
 
