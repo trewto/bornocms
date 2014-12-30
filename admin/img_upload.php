@@ -49,9 +49,9 @@ if(user_can('upload_image')){
 			 $loc = date("Y").'/'. date("m") . '/';
 			 
 			 
-			 
-			 
-			 
+			 if(!class_exists("imgUploader")){
+				include_once("ImgUploader.class.php");
+			 }
 			 $img = new imgUploader($_FILES['file']);
 			 $time= time();
 			// $_FILES['file']['name'];
