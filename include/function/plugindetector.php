@@ -276,6 +276,10 @@ while(($file = readdir($handle))!==FALSE)
 		
 		if(isset($_GET['delete']) && !empty($_GET['delete'])){
 			$a_n   = htmlentities($_GET['delete']);
+			$a_n = stripslashes($a_n);
+			$a_n = stripcslashes($a_n);
+			
+			
 			if(in_array($a_n,$plugindir)){
 				//echo 'actived';
 				if(in_array($a_n,$p_array_f_d)){

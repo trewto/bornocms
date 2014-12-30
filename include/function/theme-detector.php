@@ -288,6 +288,9 @@ else if(isset($_GET['updated'])){
 	echo '<div class="alert alert-success">Theme updated.</div><hr>';
 }else if(isset($_GET['delete'])){
 $newvalue = htmlentities($_GET['delete']) ;
+	$newvalue= stripslashes($newvalue);
+			$newvalue = stripcslashes($newvalue);
+
 	if(in_array($newvalue,$totaltheme)){
 		if(get_the_option('theme_folder_name')==$newvalue){
 			borno_die('You must disable the theme , or active another theme before delete');

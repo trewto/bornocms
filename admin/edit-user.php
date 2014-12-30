@@ -142,7 +142,8 @@ with (thisform)
 <?php			
 			echo '<form method="POST" action="" onsubmit="return validate_form(this)">';
 			//echo '<a href="'.get_the_option('site_address').'/?profile='.user_by_id($user_id,'username').'">Visit Profile</a>';
-			echo '<a href="'.get_the_option('site_address').'/profile/'.user_by_id($user_id,'username').'">Visit Profile</a>';
+			//echo '<a href="'.get_the_option('site_address').'/profile/'.user_by_id($user_id,'username').'">Visit Profile</a>';
+			echo the_user_link($user_id,true);
 			?>
 			
 			<table class="table table-bordered">
