@@ -59,7 +59,7 @@ function doc_permalink($id){
 }
 
 function permalink_to_doc_id($permalink){
-	$query = borno_query("SELECT * FROM prefix_dpermalink WHERE permalink='$permalink'",1,1,1,1);
+	$query = borno_query("SELECT * FROM prefix_dpermalink WHERE permalink='$permalink'");
 	
 	$row =  mysqli_fetch_array($query);
 
