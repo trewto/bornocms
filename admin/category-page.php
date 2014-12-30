@@ -30,7 +30,7 @@ if($i==true){
 	echo '<ul class="admincatpage">';
 	while($row = mysqli_fetch_array($query)){
 		echo '<li>';
-		echo '<a href="'.the_cat_link($row['id']).'/">';
+		echo '<a href="'.the_cat_link($row['id']).'">';
 		echo htmlspecialchars($row['name']);
 		echo '</a> ';
 		if($row['id']!=1){

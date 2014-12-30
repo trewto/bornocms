@@ -85,7 +85,11 @@ if(isset($_GET['search'])){
 			$newquery='';
 		}	
 		$newquery="$newquery and ($prefix_content.post_status='publish' and $prefix_content.title LIKE '%".mysqli_escape($get_search)."%' or $prefix_content.content LIKE '%".mysqli_escape($get_search)."%')";
-		$newget=$newget."?search=".$get_search;
+		if(get_the_option("site_permalink")=="getstyle"){
+			$newget=$newget."&search=".$get_search;
+		}else{
+			$newget=$newget."?search=".$get_search;
+		}
 		
 		
 
@@ -101,7 +105,7 @@ $newget="";
 if(isset($_GET['cat']) && !isset($_GET['search'])){
 $cat= mysqli_escape($_GET['cat']);
  $sql ="SELECT $prefix_content.id,$prefix_content.user_id,$prefix_content.times, $prefix_content.title, $prefix_content.content, $prefix_content.post_status from $prefix_content, $prefix_catmeta  , $prefix_cat
-WHERE $prefix_catmeta.post_id = $prefix_content.id and $prefix_catmeta.cat_id = $cat and $prefix_catmeta.cat_id =$prefix_cat.id 
+WHERE $prefix_catmeta.post_id = $prefix_content.id and $prefix_catmeta.cat_id = '$cat' and $prefix_catmeta.cat_id =$prefix_cat.id 
 $newquery";
 
 }else if(isset($_GET['orderbyvisit'])){

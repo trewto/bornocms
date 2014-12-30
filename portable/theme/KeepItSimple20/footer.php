@@ -24,7 +24,7 @@
 		
 
 
-         <p class="copyright">&copy; Copyright 2014 Keep It Simple. &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/"></a> Styleshout & Powered by Borno CMS.</p>
+         <p class="copyright">&copy; Copyright 2015 Keep It Simple. &nbsp; Design by <a title="Styleshout" href="http://www.styleshout.com/"></a> Styleshout & Powered by Borno CMS.</p>
         
       </div> <!-- End row -->
 

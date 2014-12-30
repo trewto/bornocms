@@ -175,6 +175,12 @@ Don't Forget to say thanks
 Download Plugins and Themes
 ---------------
 Temporay themes and plugins are avilable here  - 
-http://goo.gl/iH3OSA
+http://goo.gl/iH3OSA <br>
+Sample : http://borno.webdesigncr3ator.com/<br>
+Documention and lasted news on :  http://bornocms.wordpress.com
+
+Contact us
+---------------
+Email bornocms@gmail.com
 
 
