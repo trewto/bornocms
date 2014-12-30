@@ -15,7 +15,6 @@ function b_about_page(){
 	?>
 	<h2>Welcome to Borno CMS</h2>
 	<i>Version : <?php echo VERSION ; ?></i><br>
-	<i> Quality : <?php global $lck ; echo $lck->FEED==1 ? "Premium" : "Free";    ?></i><br>
 	<i>Author : Trewto Roy </i><br>
 	<i>This is the first version of Borno CMS. I am sure that you will be happy to use it</i>
 	<!--<hr>

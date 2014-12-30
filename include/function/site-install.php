@@ -781,7 +781,7 @@ RewriteRule . ".$htfolder."index.php [L]
 									if	(! $count == 1){
 										//welcome post content
 										$title  = 'Hello World!';
-										$content = 'Hello user , This is your new website and it is an sample post . Please delete it and start blogging .';
+										$content = 'Hello user , This is your new website and it is a sample post . Please delete it and start blogging .';
 										mysqli_query($connection,"INSERT INTO $contenttable (`user_id`, `title`, `content`, `post_status`, `post_level`, `post_password`, `comment_permission`, `browser_info`, `ip`, `edited`,`active_key`) VALUES ( '$rand_user', '$title', '$content', 'publish','public','', 'false', 'Its an auto genatate post', '$user_ip','false','$active_key')");
 									}
 									mysqli_query($connection," INSERT INTO $doctable (
@@ -797,7 +797,7 @@ RewriteRule . ".$htfolder."index.php [L]
 `times`
 )
 VALUES (
-'1', '1', 'About', 'This is site about page', 'publish', 'auto genarated', '$user_ip', 'false', '$active_key',
+'1', '1', 'About', 'This is about page', 'publish', 'auto genarated', '$user_ip', 'false', '$active_key',
 CURRENT_TIMESTAMP
 )");
 								
