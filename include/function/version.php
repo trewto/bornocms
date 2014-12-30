@@ -10,7 +10,7 @@
 
 
 //global $the_version 
-$the_version	 =  'PR.1.0';
+$the_version	 =  '1.0';
 
 
 

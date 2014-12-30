@@ -131,7 +131,7 @@ function comment_form(){
 	$sitename = get_the_option('site_address');//site-address
 	echo '<form method="POST" class="commentarea" action="'.$sitename.'/comment-submit.php">';
 	echo '<input type="hidden" name="post_id" value="'.$post_id.'" />';
-	echo '<label for="c-t-area">Comment Here</label><br>';
+	echo '<label for="c-t-area" class="com-l">Comment Here</label><br>';
 	echo '<textarea name="content" id="c-t-area" class="form-control c-t-area" ></textarea><br>';
 	echo '<input type="submit" value="Comment" name="comment" class="btn btn-success"/>';
 	echo '</form>';
@@ -147,7 +147,28 @@ function comment_form(){
  * display the comment by the post id
  *
  */
-function li_comment($post_id,$avatar=true,$span_ray = true){
+function li_comment($post_id,$avatar=true,$span_ray = true,$data=array()){
+$post_user =  the_post_user( "id" , $post_id);
+	$class_id = array(
+						"ul_class" => "comment",
+						"li_class" => "comment_li",
+						"avatar_class" => "img-polaroid avatar"
+				
+				);
+
+	
+	foreach($data as $n=> $value){
+		$class_id[$n] = $value ; 
+	}
+	
+
+
+
+
+
+
+
+
 	$int_options = array("options"=>array("min_range"=>1));
 
 if(filter_var($post_id, FILTER_VALIDATE_INT, $int_options)){
@@ -160,7 +181,7 @@ if(filter_var($post_id, FILTER_VALIDATE_INT, $int_options)){
 	//	echo '<div class="comment_count">'.$total_comment.' Comment Found</div>';
 		
 
-		echo '<ul class="comment" id="comment-display-'.$post_id.'">';
+		echo '<ul class="'.$class_id['ul_class'].'" id="comment-display-'.$post_id.'">';
 		//while
 		while($row = mysqli_fetch_array($query)){
 			$user = the_user($row['user_id'] , 'name') ; //name
@@ -175,17 +196,23 @@ if(filter_var($post_id, FILTER_VALIDATE_INT, $int_options)){
 			}
 			global $url_profile;
 			global $post_GET;
-			echo '<li id="comment-'.$row['id'].'">';
+			echo '<li class="'.$class_id['li_class'].'" id="comment-'.$row['id'].'">';
 			echo '<div class="comment-data">';
 			if($avatar){
-			echo '<img class="img-polaroid avatar" src="'.get_gravatar( $email, 60).'" />';
+			echo '<img class="'.$class_id['avatar_class'].'" src="'.get_gravatar( $email, 60).'" />';
 			}
 			
 			if($span_ray) {
 				echo '<div class="ray"><span class="arrow"></span><span class="arrows"></span></div>';
 			}
 			echo '<div class="comment-content">';
-			echo '<a href="'.$site_address.$url_profile.$username.'" class="label label-warning">'.$name.'</a> ';
+			if($post_user==$row['user_id']){
+				$nclas = "admin_author";
+			}else{
+				$nclas = "guest_author";
+			}
+				echo '<a href="'.$site_address.$url_profile.$username.'" class="label label-warning '.$nclas.'">'.$name.'</a> ';
+			
 			//echo '<a class="comment-timex label label-warningx" href="'.$site_address.$post_GET.$post_id.'/#comment-'.$row['id'].'">';
 			echo '<a class="comment-timex label label-warningx" href="'.the_post_link($row['post_id'],false).'#comment-'.$row['id'].'">';
 			// echo the post h:i:A

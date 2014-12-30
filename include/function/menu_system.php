@@ -172,7 +172,7 @@
 			*	Display menu , submenu and more deep submenu
 			*
 			*/
-			echo '<ul class="'.$ul_class.'">';
+			echo '<ul id="nav" class="'.$ul_class.'">';
 			
 			
             while($row = mysqli_fetch_array($query)){

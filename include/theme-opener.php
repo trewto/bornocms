@@ -169,7 +169,7 @@ if(isset($permalinks[0]) and isset($permalinks[1])){
 		
 		
 		case('doc'):
-			$_GET['doc']  = permalink_to_doc_id($permalinks[1]);
+		  	$_GET['doc']  = permalink_to_doc_id($permalinks[1]);
 			//$_GET['doc'] = $_GET['doc'] ? $_GET['p'] : $permalinks[1] ; 
 		break;
 		
@@ -400,7 +400,7 @@ $title =get_the_option('site_name').' | '.get_the_option('site_description');
 	}
 }*/
 else if(isset($_GET['doc'])){
-	if($_GET['doc']=='list'){
+	if($_GET['doc']==='list'){ 
 		$include=('doc.php');
 		$title ='Document Map';
 		$function_page = 'doc';
@@ -469,6 +469,7 @@ else if(isset($_GET['userpost'])){
 	}
 }*/
 else{
+	//var_dump($_GET);
 	$title =get_the_option('site_name').' | '.get_the_option('site_description');
 	$include=('index.php');
 	$function_page = 'home';
@@ -609,14 +610,14 @@ if(defined("INCLUDE_THEME")){
 
 $theme_directory = get_the_option('theme_folder_name'); 
 if(is_admin()){
-	if(file_exists('../include/theme/'.$theme_directory.'/functions.php')){
-		include('../include/theme/'.$theme_directory.'/functions.php');//include the function file
+	if(file_exists('../portable/theme/'.$theme_directory.'/functions.php')){
+		include('../portable/theme/'.$theme_directory.'/functions.php');//include the function file
 	}
 
 }
 else{
-	if(file_exists('include/theme/'.$theme_directory.'/functions.php')){
-			include('include/theme/'.$theme_directory.'/functions.php');//include the function file
+	if(file_exists('portable/theme/'.$theme_directory.'/functions.php')){
+			include('portable/theme/'.$theme_directory.'/functions.php');//include the function file
 		}
 
 }
@@ -629,13 +630,12 @@ else{
 *
 */
 if(defined("INCLUDE_THEME")){
-	if(	file_exists('include/theme/'.$theme_directory.'/'.$include)){
-
-		include('theme/'.$theme_directory.'/'.$include);
+	if(	file_exists('portable/theme/'.$theme_directory.'/'.$include)){
+		include('portable/theme/'.$theme_directory.'/'.$include);
 
 	}
-	else{
-			include('theme/'.$theme_directory.'/index.php');
+	else{ 
+			include('portable/theme/'.$theme_directory.'/index.php');
 
 	}
 

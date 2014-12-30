@@ -752,7 +752,7 @@ RewriteRule . ".$htfolder."index.php [L]
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('pendingpost' , 'false')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('contactfrom' , 'false')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('post_revision' , 'true')");
-								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('theme_folder_name' , 'Borno Metro')");
+								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('theme_folder_name' , 'KeepItSimple20')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('number_of_post_display' , '10')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('site_permalink' , 'getstyle')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('full_install' , '0')");

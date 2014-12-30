@@ -28,7 +28,7 @@ $user = 'Plugin Name'; //get this value from wherever it is you get it
 /**
 *	Theme theme directory
 */
-$base = '../include/plugin/';
+$base = '../portable/plugin/';
 
 /**
 *	open the dir
@@ -121,7 +121,7 @@ while(($file = readdir($handle))!==FALSE)
 	
 	foreach ($totalplugin as $plugin){
 	
-		$dir = '../include/plugin/'.$plugin.'/plug.php';
+		$dir = '../portable/plugin/'.$plugin.'/plug.php';
 		
 		
 		if(!is_dir($dir)){
@@ -291,25 +291,24 @@ while(($file = readdir($handle))!==FALSE)
 					
 					
 					
+				
 					
-					# recursively remove a directory
-					function del_plug_rrmdir($dir) {
-						foreach(glob($dir . '/*') as $file) {
-							if(is_dir($file))
-								rrmdir($file);
-							else
-								unlink($file);
-						}
-						rmdir($dir);
-					}
-					
-					
+	if(!function_exists('del_plug_rrmdir')){
+			
+					function del_plug_rrmdir($path) {
+			return is_file($path) ?
+            @unlink($path) :
+            array_map(__FUNCTION__, glob($path.'/*')) == @rmdir($path);
+}
+			}
+			
 					
 					
 					
 					
-					del_plug_rrmdir('../include/plugin/'.$a_n);
-				//	unlink('../include/plugin/'.$a_n);
+					
+					del_plug_rrmdir('../portable/plugin/'.$a_n);
+				//	unlink('../portable/plugin/'.$a_n);
 					$res = 8;//deleted
 				}
 				

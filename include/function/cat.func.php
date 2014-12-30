@@ -416,9 +416,9 @@ function cat_list($start,$end,$linestart,$lineend,$link=false){
 		echo '</'.$lineend.'>';
 		echo '</'.$end.'>';
 	}else{
-	
-		while($row= mysqli_fetch_array($query)){
 			echo '<'.$start.'>';
+		while($row= mysqli_fetch_array($query)){
+		
 			echo '<'.$linestart.'>';
 			
 			if($link){
@@ -431,10 +431,10 @@ function cat_list($start,$end,$linestart,$lineend,$link=false){
 			}
 			
 			echo '</'.$lineend.'>';
-			echo '</'.$end.'>';
+		
 
 		
-		}
+		}	echo '</'.$end.'>';
 	
 	
 	

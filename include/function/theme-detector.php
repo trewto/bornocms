@@ -42,7 +42,7 @@ $user = 'Theme Name'; //get this value from wherever it is you get it
 /**
 *	Theme theme directory
 */
-$base = '../include/theme/';
+$base = '../portable/theme/';
 
 /**
 *	open the dir
@@ -107,7 +107,7 @@ $author = '';
 	*	Loop through the lines
 	*	Check the style.css file
 	*/
-	$file = '../include/theme/'.$theme.'/style.css';
+	$file = '../portable/theme/'.$theme.'/style.css';
 	
 	/**
 	*	Checking if style.css file exists
@@ -235,16 +235,11 @@ $author = '';
 
 	if(!function_exists('del_plug_rrmdir')){
 			
-					# recursively remove a directory
-					function del_plug_rrmdir($dir) {
-						foreach(glob($dir . '/*') as $file) {
-							if(is_dir($file))
-								rrmdir($file);
-							else
-								unlink($file);
-						}
-						rmdir($dir);
-					}
+					function del_plug_rrmdir($path) {
+			return is_file($path) ?
+            @unlink($path) :
+            array_map(__FUNCTION__, glob($path.'/*')) == @rmdir($path);
+}
 			}
 			
 
@@ -297,7 +292,7 @@ $newvalue = htmlentities($_GET['delete']) ;
 		if(get_the_option('theme_folder_name')==$newvalue){
 			borno_die('You must disable the theme , or active another theme before delete');
 		}else{
-			del_plug_rrmdir('../include/theme/'.$newvalue);
+			del_plug_rrmdir('../portable/theme/'.$newvalue);
 			borno_die('Theme Deleted','Success! deleted');
 		}
 	
