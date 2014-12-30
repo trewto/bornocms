@@ -27,7 +27,11 @@
    <!-- Favicons
 	================================================== -->
 	<!--<link rel="shortcut icon" href="favicon.png" >-->
+		<?php
+		//you must add header view on every header.php file
+		header_view() ;
 
+		?>
 </head>
 
 <body>

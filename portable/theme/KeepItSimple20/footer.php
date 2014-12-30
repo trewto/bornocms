@@ -39,6 +39,7 @@
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="<?php echo theme_directory() ;?>/js/jquery-migrate-1.2.1.min.js"></script>  
    <script src="<?php echo theme_directory() ;?>/js/main.js"></script>
+	<?php footer_view();?>
 
 </body>
 
