@@ -177,7 +177,7 @@ Download Plugins and Themes
 Temporay themes and plugins are avilable here  - 
 http://goo.gl/iH3OSA <br>
 Sample : http://borno.webdesigncr3ator.com/<br>
-Documention and lasted news on :  http://bornocms.wordpress.com
+Documention and lasted news on :  http://bornocms.blogspot.com
 
 Contact us
 ---------------
