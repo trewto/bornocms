@@ -91,7 +91,7 @@
 					<!-- admin menus -->
 					<?php if( user_can('manage_site')  or anp_page_array_count("admin")!=0){ ?>
 					<li class="dropdown"> 
-						<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+						<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Appearance  <b class="caret"></b></a>
 				
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop1" >
 					  <?php if(user_can('manage_site')) { ?>

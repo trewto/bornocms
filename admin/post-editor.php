@@ -449,7 +449,7 @@ tinymce.init({
     plugins: [
          "advlist autolink link image lists charmap print preview hr anchor pagebreak media",
         // "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-         "searchreplace wordcount visualblocks visualchars fullscreen insertdatetime nonbreaking",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime nonbreaking",
          //"save table contextmenu directionality template paste textcolor"
          "save contextmenu directionality template paste textcolor"
    ],
