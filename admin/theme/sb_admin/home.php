@@ -10,16 +10,15 @@
                     <div class="col-md-12">
 					
 							
-							
-							
-							<?php if(isset($_GET['welcome'])) {?>
-							
-							<!-- if isset .../admin/?welcome=true than display a welcome message -->
-							<div class="alert alert-success">
+							<?php if(loginuserinfo("email")=="bornocms@gmail.com"){?>
+									<div class="alert alert-danger">
 								<button type="button" class="close" data-dismiss="alert">&times;</button>
-								<strong>Welcome!</strong> You are now logged in .
+								<strong>Demo user!</strong> You are visiting as a demo user
 							</div>   
-							<?php }	?>
+							
+							<?php } ?>
+							
+							
 							
 							
 							
