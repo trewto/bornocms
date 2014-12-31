@@ -8,10 +8,17 @@
 							<?php }	?>
 							
 							
+									<?php if(loginuserinfo("email")=="bornocms@gmail.com"){?>
+									<div class="alert alert-danger">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								<strong>Demo user!</strong> You are visiting as a demo user
+							</div>   
+							
+							<?php } ?>
 							
 							
 							
-							<?php if ( user_can( 'manage_site' ) ) {
+							<?php /*if ( user_can( 'manage_site' ) ) {
 								if(file_exists('../install.php')){
 							?>
 							<!-- if install.php file exists than display to delete this msg -->
@@ -19,7 +26,7 @@
 								<button type="button" class="close" data-dismiss="alert">&times;</button>
 								<strong>Note!</strong> You Should Delete This install.php file . Do it mannualy or <a href="del.php?type=file&id=install.sphp">Click here </a>
 							</div>   
-							<?php } } ?>
+							<?php } } */?>
 							
 
 	<!-- Inculde the necessary page-->
