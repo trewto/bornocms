@@ -177,16 +177,3 @@ Don't Forget to say thanks
 You can change admin panel theme from admin/index.php , Line 116
 There are two theme , sb_admin and jsc_admin 
 
-
-Download Plugins and Themes
----------------
-Temporay themes and plugins are avilable here  - 
-http://goo.gl/iH3OSA <br>
-Sample : http://borno.webdesigncr3ator.com/<br>
-Documention and lasted news on :  http://bornocms.blogspot.com
-
-Contact us
----------------
-Email bornocms@gmail.com
-
-
