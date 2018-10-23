@@ -1,6 +1,6 @@
 Borno CMS
 ================
-Borno is an opensource content management system
+Borno is an open-source content management system
 
 Feature
 -------------
