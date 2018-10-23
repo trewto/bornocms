@@ -19,7 +19,7 @@ include('functions.php');
 *	check invalid login
 */	 
 if(isset($_SESSION['loginerror']) &&  $_SESSION['loginerror']>5){
-	borno_die('You are already do many login attemp');
+	borno_die('You have made too much login attemp. So we blocked you for security reason');
 }
 
 	
@@ -155,7 +155,7 @@ if(isset($_SESSION['keyprogress'])){
 echo '<div class="alert alert-warning width-300" style="max-width:300px;margin:0 auto;"><button type="button" class="close" data-dismiss="alert">&times;</button>'.$_SESSION['keyprogress'].'</div>';
 }
 else{
-echo '<div class="alert alert-warning width-300" style="max-width:300px;margin:0 auto;"><button type="button" class="close" data-dismiss="alert">&times;</button>Why try to access this page ?</div>';
+echo '<div class="alert alert-warning width-300" style="max-width:300px;margin:0 auto;"><button type="button" class="close" data-dismiss="alert">&times;</button>Unable to access this page.</div>';
 }
 echo '</div>';
 unset($_SESSION['keyprogress']);
@@ -255,7 +255,7 @@ if(isset($_POST['submit'])){
 			}
 			else{
 				if(!isset($reason)){
-					$msg.= 'Your account is not verified . please verify your account. An autogenarate mail sent in your mail address . please check the mail or contact the site  admin';
+					$msg.= 'Your account is not verified. Please verify your account. A mail had been sent in your mail address. Please check the mail or contact with the site administrator';
 				}
 			}			
 		}

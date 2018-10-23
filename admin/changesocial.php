@@ -37,10 +37,10 @@
 	 */
 	if(isset($_POST['submit']) && isset($_POST['fb']) && isset($_POST['twitter'])) {
 		if(!empty($_POST['fb']) && !validate_username($_POST['fb'])){
-			borno_die('Please insert a validate facebook username');
+			borno_die('Please insert a valid facebook username,');
 		}	
 		if(!empty($_POST['twitter']) && !validate_username($_POST['twitter'])){
-			borno_die('Please insert a validate twitter username');
+			borno_die('Please insert a valid twitter username.');
 		}
 	
 		if($fb_count==0){
@@ -61,7 +61,7 @@
 			borno_query("UPDATE $prefix_usermeta SET value = '$fb_value' WHERE user_id =$user_id and name='fb'");
 		}
 		else{
-			$msg = 'facebook not changed';
+			$msg = 'Not changed.';
 		}
 		
 		//twitter
@@ -81,7 +81,7 @@
 			$msg= 'Save Changed';
 		}
 		else{
-			$msg =  'twitter not changed';
+			$msg =  'Not changed';
 		}
 			
 		//msg	

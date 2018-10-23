@@ -115,9 +115,9 @@ $last_page = ceil($num/$per_page);
 if ($last_page<$page){
 if(isset($_GET['search']) && !empty($_GET['search'])){
 echo '';
-echo('<div class="alert alert-warning">No User Found in your search keyword</div>');
+echo('<div class="alert alert-warning">No user is found in according to keyword</div>');
 }
-echo ('<div class="alert alert-warning">There are no content in this page</div>');
+echo ('<div class="alert alert-warning">There is no content in this page</div>');
 
 }
 // And set the first page

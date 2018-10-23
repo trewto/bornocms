@@ -40,7 +40,7 @@ if(isset($_POST['submit']))	{
 				/*
 				*	Display Confirmation message
 				*/
-				echo '<div class="alert alert-success">You successfully change the thing</div>';
+				echo '<div class="alert alert-success">You have successfully changed this.</div>';
 			}
 			else{
 				/*
@@ -54,7 +54,7 @@ if(isset($_POST['submit']))	{
 				/*
 				*	request for insert validate name
 				*/
-				$msg =  'please insert a vaildate name';
+				$msg =  'Please fill a valid name.';
 				echo '	<div class="alert alert-warning">
 													<button type="button" class="close" data-dismiss="alert">&times;</button>
 												'.$msg.'
@@ -131,7 +131,7 @@ if(isset($_POST['submit']))	{
                 </tr>
 				
 				 <tr>
-                  <td>Current Log in :</td>
+                  <td>Current Logged in:</td>
                   <td>  <?php 
 				  
 				  /*

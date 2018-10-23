@@ -77,7 +77,7 @@ if(isset($_GET['edit_id'])){ // check that this page is editable page or not
 					
 					if($row['user_id']==$user_id){
 						$permission ='false';
-						borno_die('You can not edit your own post');
+						borno_die('You can not even edit your own article');
 					}else{
 						$permission = 'ok';
 					}
@@ -88,7 +88,7 @@ if(isset($_GET['edit_id'])){ // check that this page is editable page or not
 				
 			}
 			else{
-				$msg = 'No post found';
+				$msg = 'No article found';
 			}	
 	}
 	
@@ -101,7 +101,7 @@ if(isset($_GET['edit_id'])){ // check that this page is editable page or not
 		
 	if(	$abc == false and isset($_GET['edit_id'])){
 	
-		borno_die('you can not edit any post');//it's mean you can't edit any content 
+		borno_die('you can not edit any article');//it's mean you can't edit any content 
 	
 	}
 	##########STEP 2
@@ -172,7 +172,7 @@ if(isset($_POST['submit'])){
 	{
 	
 			echo  '<div class="alert alert-block alert-warning fade in sinnup-warning">
-            <strong>ERROR . YOU NOT FILL THE FORM</strong></div>';
+            <strong>Error. Fill the form correctly.</strong></div>';
 			borno_die('You can\'t submit a blank query');
 	}
 	else{
@@ -260,7 +260,7 @@ if(get_the_option('pendingpost')=='false'){
 			header("Location:".admin_url()."/?pages=editor&edit_id={$go_id}&msg=nw");
 							
 		}else{
-			borno_die('Your content is been Progressed','The post is Progressed');
+			borno_die('Progressing','The post is Progressed');
 		}
 		
 		
@@ -286,7 +286,7 @@ if(get_the_option('pendingpost')=='false'){
 		if(empty($trim_title) or empty($trim_content))
 			{
 				echo  '<div class="alert alert-block alert-danger fade in sinnup-warning">
-				<strong>Error . Please write content . Dont give a blank query .</strong></div>';
+				<strong>Please fill with content</strong></div>';
 				borno_die('You can\'t submit a blank query');
 			}
 		else{
@@ -753,11 +753,11 @@ if($submit_key=='update'){
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Are You sure to trash this ?</h4>
+					<h4 class="modal-title" id="myModalLabel">Are you sure about trashing this content?</h4>
 				</div>
 				<div class="modal-body">
 
-<h3 id="myModalLabel">If you trash this , may be is not restore by you .</h3>
+<h3 id="myModalLabel">By trashing this, you might not able to recover it.</h3>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

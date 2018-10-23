@@ -48,7 +48,7 @@ function manage_widget(){
 		}
 		echo '<div class="alert alert-success">
 		<button data-dismiss="alert" class="close" type="button">×</button>
-		Your Widget setting is updated
+		Your widget setting is updated.
     </div>';
 	}
 	echo '<h2>Widget panel</h2>';

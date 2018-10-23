@@ -21,10 +21,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
 	
 		if(user_can('manage_site')){
 			unlink('../install.php');
-			borno_die('Opreation done');
+			borno_die('Operation is done');
 		}
 		
-		borno_die("Order Done","Successfully removed");
+		borno_die("Operation is done","Successfully removed");
 		
 	}
 	
@@ -211,11 +211,11 @@ if(isset($_GET['type']) && isset($_GET['id'])){
 
 else{
 
-	borno_die( ';) why you want to delete this , unfortunately there are to content to delete' );
+	borno_die( 'You can not do this.' );
 	
 }
 //is_exists_user
 }
 else{
-	borno_die( 'No refer found , Please take a refer' );
+	borno_die( 'No refer is found. Please take a valid refer' );
 }

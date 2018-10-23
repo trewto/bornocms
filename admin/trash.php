@@ -82,14 +82,14 @@ if(isset($_GET['trashtype']) &&  isset($_GET['id'])){
 					borno_query("UPDATE $prefix_content SET `post_status` = 'trash' WHERE id = '$id'");
 					
 					header('location:'.admin_url().'?pages=managepost&by=trash&msg=trash');
-					borno_die('post trashed','Command done');
+					borno_die('Content trashed','Command done');
 				}
 				else if(user_can('trash_own_post')){
 					if(loginuserinfo('id')==$post_user){
 					//update
 						borno_query("UPDATE $prefix_content SET `post_status` = 'trash' WHERE id = '$id'");
 						header('location:'.admin_url().'?pages=managepost&by=trash&msg=trash');
-						borno_die('post trashed','Command done');
+						borno_die('Content trashed','Command done');
 					}
 				}
 				else{
@@ -99,19 +99,19 @@ if(isset($_GET['trashtype']) &&  isset($_GET['id'])){
 				
 			}
 			else{
-				borno_die('Already trash');
+				borno_die('Already trashed');
 			}
 			
 		}
 		else{
-			borno_die('content not exists');
+			borno_die('Content does not exist.');
 
 			}
 	
 	}
 	
 	else{
-			borno_die('Unavailable service');
+			borno_die('Unavailable.');
 
 	}
 }
@@ -148,13 +148,13 @@ if(isset($_GET['restoretype']) &&  isset($_GET['id'])){
 
 			}
 			else{
-				borno_die('Comment already publish');
+				borno_die('Comment already published');
 
 			}
 		}
 		else{
 			borno_die('Not exists');
-			echo 'Comment not exists';
+			echo 'Comment does not exist.';
 		}
 
 	}
@@ -178,8 +178,8 @@ if(isset($_GET['restoretype']) &&  isset($_GET['id'])){
 					borno_die('restored','restored');
 				}
 				else{
-					echo 'ops you can not restore it ';
-					borno_die('Can not restore it');
+					//echo 'You can not restore it.';
+					borno_die('you can not restore it');
 				}
 				
 			}
@@ -198,5 +198,5 @@ if(isset($_GET['restoretype']) &&  isset($_GET['id'])){
 }
 }
 else{
-	die('Progress Faild');
+	die('Progress Failed');
 }

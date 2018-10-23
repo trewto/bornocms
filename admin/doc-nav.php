@@ -10,7 +10,7 @@ echo('You can not access this page');
 if(isset($_GET['msg'])){
 	if($_GET['msg']=='newdoc'){
 				echo  '<div class="alert alert-block alert-warning fade in sinnup-warning">
-            <strong>Congratulation ! You crate a doc</strong></div>';
+            <strong>Congratulation! You have created the doc</strong></div>';
 	}
 }
 $user_id = loginuserinfo('id');;
@@ -120,7 +120,7 @@ $last_page = ceil($num/$per_page);
 if ($last_page<$page){
 if(isset($_GET['search']) && !empty($_GET['search'])){
 echo '';
-echo('<div class="alert alert-warning">No Content Found in your search keyword</div>');
+echo('<div class="alert alert-warning">No content found according to this keyword</div>');
 }
 echo ('<div class="alert alert-warning">There are no content in this page</div>');
 //echo();
@@ -200,7 +200,7 @@ $limit = "LIMIT $start, $per_page";
 
 /////count result
 if(isset($_GET['search']) && !empty($_GET['search']) && !$post_number==0){
-echo '<div class="alert alert-success">'.$post_number.' Result found</div>';
+echo '<div class="alert alert-success">'.$post_number.' result found</div>';
 }
 
 

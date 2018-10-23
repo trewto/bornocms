@@ -141,7 +141,7 @@ if ($last_page<$page){
 
 	if(isset($_GET['search']) && !empty($_GET['search'])){
 		echo '';
-		echo('<div class="alert alert-warning">No Content Found in your search keyword</div>');
+		echo('<div class="alert alert-warning">No content found according to your keyword</div>');
 	}
 	
 	echo ('<div class="alert alert-warning">There are no content in this page</div>');
@@ -222,7 +222,7 @@ $limit = "LIMIT $start, $per_page";
 
 /////count result
 if(isset($_GET['search']) && !empty($_GET['search']) && !$post_number==0){
-echo '<div class="alert alert-success">'.$post_number.' Result found</div>';
+echo '<div class="alert alert-success">'.$post_number.' result found</div>';
 }
 
 

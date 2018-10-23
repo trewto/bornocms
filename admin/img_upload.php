@@ -91,7 +91,7 @@ if(user_can('upload_image')){
 				echo "<img style='max-width:50%;max-height:50%;' src='".get_the_option('site_address').'/photos/'.$image."'/>";
 				echo '<br>';
 				echo '<br>';
-				echo 'Your image has been uploaded successfully . Here is your image link';
+				echo 'Your image has been uploaded successfully. Here is your image link';
 				echo '<br>';
 				echo '<br>';
 				echo '<code>'.get_the_option('site_address').'/photos/'.$image.' </code>';

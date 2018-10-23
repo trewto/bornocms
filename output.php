@@ -9,7 +9,7 @@
 *	Direct access is not allowed
 */
 if(basename($_SERVER['SCRIPT_FILENAME'])==='output.php'){
-	die( 'You can not get captcha in this way' );
+	die( 'This is not proper way to get captcha' );
 }
 
  

@@ -1,6 +1,6 @@
 <?php
 /*
-*	@packge Borno CMS
+*	@package Borno CMS
 *	@author Arnob Roy
 *	
 *

@@ -55,16 +55,16 @@ function site_install($create){
 		
 		
 		if(!$password == $repassword ){
-			echo '<div class="form-install"><h4>Password Not Match</h4></div>';
+			echo '<div class="form-install"><h4>Password is not matching</h4></div>';
 		}
 		if(empty($password)){
-			echo '<div class="form-install"><h4>Blank password not allowed</h4></div>';
+			echo '<div class="form-install"><h4>Blank password is not allowed</h4></div>';
 		}
 		if(empty($username)){
-			echo '<div class="form-install"><h4>Blank user-name not allowed</h4></div>';
+			echo '<div class="form-install"><h4>Blank user-name is not allowed</h4></div>';
 		}
 		if(empty($prefix)){
-			echo '<div class="form-install"><h4>Blank prefix not allowed </h4></div>';
+			echo '<div class="form-install"><h4>Blank prefix  is not allowed </h4></div>';
 		}
 		
 		if(filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -77,7 +77,7 @@ function site_install($create){
 		if(!empty($dbname) && !empty($dbuser) &&  !empty($username) && !empty($email) && !empty($password) && !empty($prefix) && $password == $repassword && $emails=='ok'){
 			$connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 			if (!$connection){
-					echo '<div class="form-install">Wrong database information. check it and try again
+					echo '<div class="form-install">Wrong database information. Check it and try again
 						<a href="install.php" class="btn">Try Again</a>
 						</div>';
 			}
@@ -819,7 +819,7 @@ CURRENT_TIMESTAMP
 			}
 		}
 		else{
-		echo '<div class="form-install"><h4>Mistake! Check the all input . May be you are not fill any input or insert wrong information.</h4> <br>
+		echo '<div class="form-install"><h4>Mistake!Check all inputs.</h4> <br>
 				<a href="install.php" class="btn">Try Again</a>
 		</div>';
 		}
@@ -829,7 +829,7 @@ CURRENT_TIMESTAMP
 		<form method="POST" class="form-install " action="">
 		<h2>Install</h2>
 		<p>Borno CMS</p>
-		<p>Fill up to form. Insert your databse information.</p>
+		<p>Fill up to form. Insert your database information.</p>
 		<label for="dbname">Database Name</label>
 		<input name="dbname" class="span4" id="dbname" type="text" />
 		<label for="dbpass">Database Pass</label>

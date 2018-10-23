@@ -109,7 +109,7 @@ string $comment;
 				
 				
 				if(!$plugok){
-					borno_die('Not a valid plugin . plug.php not found');
+					borno_die('Not a valid plug-in. plug.php is not found');
 				}
 				
 					//var_dump($tfile);
@@ -131,14 +131,14 @@ string $comment;
 					 *
 					 /* */
 					 //////////working
-					borno_die('Plugin successfully uploaded','Success');
+					borno_die('Plug-in is successfully uploaded','Success');
 				 }
 				
 					
 
 				}else{
 					//unlink($file);
-					echo 'Something going wrong';
+					echo 'Something is going wrong';
 				}
 			}
 

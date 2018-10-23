@@ -12,7 +12,7 @@ if(isset($_GET['success'])){
 		$uptwol="../../index.php";
 //				echo "<a href='".$uptwol."'>dsa</a>";
 
-		die( "You successfully installed your site. <a href='".$uptwol."'>Click Here </a> to visit your new website. " );
+		die( "You have successfully installed your website. <a href='".$uptwol."'>Click Here </a> to visit your new website. " );
 	}
 	else{
 		die('Why You try this?');
@@ -25,11 +25,11 @@ if(isset($_SESSION['installwelcomemail'])){
 		if($_SESSION['date']==md5(date('d'))){
 			include('mail-info.php');
 			$to = $_SESSION['admin_mail'];
-			$subject ="You successfully install your site";
+			$subject ="You have successfully installed your website";
 			$message="Dear ".$_SESSION['username'].",
-			It's a auto generate mail form you new website. You will glad to now your site is successfully installed. Happy Blogging with your new site.
+		Your site and mail system is successfully installed.
 			
-			<a href='".$_SESSION['address']."'>Visit your new blogging platform</a>
+			<a href='".$_SESSION['address']."'>your website</a>
 			";
 			sent_mail($to , $subject , $message);
 			

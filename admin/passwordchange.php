@@ -12,13 +12,13 @@ $user_id = loginuserinfo('id');;
 if(isset($_POST['submit'])){
 
 	//check input
-	if(!isset($_POST['newpassword'])){borno_die('Something is going wrong');}
-	if(!isset($_POST['renewpassword'])){borno_die('Something is going wrong');}
+	if(!isset($_POST['newpassword'])){borno_die('Something is going wrong.');}
+	if(!isset($_POST['renewpassword'])){borno_die('Something is going wrong.');}
 	
 	
 	//check mewpassword length
 	if(strlen($_POST['newpassword'])<8 or 12<strlen($_POST['newpassword'])){
-		borno_die('password must be between 8 and 12');
+		borno_die('Your password range must be [8-12]');
 	}
 	
 	//cjecl mewpassword
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 		
 		add_user_meta('passwordchange','self',$user_id);
 		
-		borno_die(  'password successfully changed . Now you are logged out . Please log in again ' );
+		borno_die(  'You have changed your password successfully. For security purpose you are logged out. Please log in again.' );
 		
 			echo '	<div class="alert alert-success">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
 	else{
 	
 	
-		$msg=  '*empty not allowed or *fill the password same';
+		$msg=  '*You have to fill every input <br>Fill the passwords correctly.';
 				echo '	<div class="alert alert-warning">
 						<button type="button" class="close" data-dismiss="alert">&times;</button>
 					'.$msg.'

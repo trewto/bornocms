@@ -42,7 +42,7 @@ if(user_can('manage_doc')){
 				$permission = 'ok';
 			}
 			else{
-				borno_die( 'No doc found in this id ');
+				borno_die( 'No document is found in this id ');
 			}
 		 
 		 }
@@ -183,7 +183,7 @@ tinymce.init({
      window.onbeforeunload = function() { 
       if(popit == true) {
            popit = true;
-           return "Are you sure you want to leave?"; 
+           return "Are you sure?"; 
       }
  }
   function unhook() {
@@ -301,7 +301,7 @@ function validate_form(thisform)
 {
 with (thisform)
 {
-   if (validate_del(e,"Are you sure? You Sure to delete this doc ?")==false)
+   if (validate_del(e,"Are you sure?")==false)
   {e.focus();return false;}
 
 }
