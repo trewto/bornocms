@@ -8,7 +8,7 @@
 *	check role
 */
 if(!user_can('add_user')){
-	borno_die('You can not add a user');
+	borno_die('You can not add a user.');
 }
 
 if(isset($_POST['submit'])){
@@ -19,26 +19,26 @@ if(isset($_POST['submit'])){
 	if(!empty($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['repassword']) && isset($_POST['roles']) && isset($_POST['name'])){
 		if(!validate_name($_POST['name'])){
 		
-			borno_die( 'invalid name , please inset your fulll nma');
+			borno_die( 'Invalid name , Please insert your full name.');
 		}
 		else if(filter_var($_POST['name'], FILTER_VALIDATE_INT)){
-			borno_die( 'invalid name');
+			borno_die( 'Invalid name');
 		}
 		else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-			borno_die ('invalid email');
+			borno_die ('Invalid email');
 		}
 		else if(empty($_POST['password'])){
-			borno_die( 'password empty . never updated');
+			borno_die( 'Password is empty.');
 		}
 		else if(!$_POST['password']==$_POST['repassword']){
-			borno_die( 'password not match');
+			borno_die( 'Password is not matching');
 		}
 		else if(!validate_username($_POST['username'])){
 		
-			borno_die( 'invalid username');
+			borno_die( 'Invalid username');
 		}
 		else if(empty($_POST['username'])){
-			borno_die( 'empty username');
+			borno_die( 'Invalid username');
 				
 		}
 		else{
@@ -66,11 +66,11 @@ $user_active_key =  md5(substr(str_shuffle($chars),0,8));
 					//success
 					borno_die('<div class="alert alert-success">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-															The account successfully added
+															The account is successfully created.
 															</div> ');
 				}
 				else{
-					borno_die ('email or username already exists');
+					borno_die ('Email or username is already exists');
 				}
 		}
 	
@@ -79,7 +79,7 @@ $user_active_key =  md5(substr(str_shuffle($chars),0,8));
 	}
 	else{
 	
-		borno_die ('all field is required');
+		borno_die ('All fields is required to fill');
 	}
 
 }

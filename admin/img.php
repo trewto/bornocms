@@ -8,7 +8,7 @@ include('ImgUploader.class.php');
 
 if(user_can('upload_image')){
 echo '<a href="#uploadimg" role="button" class="btn btn-danger" data-toggle="modal">Upload Image</a> ';
-echo '<a href="#imggellary" role="button" class="btn btn-danger" data-toggle="modal">Image Gellery</a>';
+echo '<a href="#imggellary" role="button" class="btn btn-danger" data-toggle="modal">Image Gallery</a>';
 
 
 ?>
@@ -58,11 +58,11 @@ echo '<a href="#imggellary" role="button" class="btn btn-danger" data-toggle="mo
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Image Gellary</h4>
+					<h4 class="modal-title" id="myModalLabel">Image Gallery</h4>
 				</div>
 				<div class="modal-body">
 
-<h3 id="myModalLabel">Gellary</h3>
+<h3 id="myModalLabel">Gallery</h3>
 <br>
  <iframe  style='border:0px solid white;width:100%;height:500px;;' src="<?php echo admin_url().'/img.gal.php'; ?>"></iframe> 
 				</div>

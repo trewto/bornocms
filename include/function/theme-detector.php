@@ -293,14 +293,14 @@ $newvalue = htmlentities($_GET['delete']) ;
 
 	if(in_array($newvalue,$totaltheme)){
 		if(get_the_option('theme_folder_name')==$newvalue){
-			borno_die('You must disable the theme , or active another theme before delete');
+			borno_die('You must have to disable the theme or active another theme before deleting it.');
 		}else{
 			del_plug_rrmdir('../portable/theme/'.$newvalue);
-			borno_die('Theme Deleted','Success! deleted');
+			borno_die('Theme is  Deleted','Success! deleted');
 		}
 	
 	}else{
-		borno_die('no valid theme found in this name');
+		borno_die('No valid theme found on this name.');
 	}
 
 }
@@ -308,7 +308,7 @@ $newvalue = htmlentities($_GET['delete']) ;
 ?><script>
 function s(){
  var myTextField = document.getElementById('jsselect');
- var answer = confirm('Are you sure to delete this ?');
+ var answer = confirm('Are you sure about deleting this ?');
 	if (answer) 
 	  {
 	  

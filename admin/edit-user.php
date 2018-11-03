@@ -84,23 +84,23 @@ if(filter_var($user_id, FILTER_VALIDATE_INT)){
 															update_user($id,'about',htmlentities($_POST['about']));
 														echo '	<div class="alert alert-success">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-														You Successfully change the profile
+														You have successfully changed the profile
 														</div>  ';
 														}
 														else{
-															borno_die( 'You must fill the form proper ly');
+															borno_die( 'You must fill the form properly');
 														}
 										 }
 										else{
-											borno_die( 'email already exists with other account' );
+											borno_die( 'Similar email exist.' );
 										}										 
 									}
 									else{
-										borno_die(		'invalid email so option not change');
+										borno_die(		'Invalid email.');
 									}
 						}
 						else{
-						borno_die( 'can not do this');
+						borno_die( 'You can not do this');
 						}						
 					}
 					else{
@@ -258,7 +258,7 @@ function validate_form(thisform)
 {
 with (thisform)
 {
-   if (validate_del(e,"Are you sure? You realy want to make this user admin ?")==false)
+   if (validate_del(e,"Are you sure?")==false)
   {e.focus();return false;}
 
 }
@@ -284,7 +284,7 @@ with (thisform)
 			<?php }
 		}
 		else{
-			borno_die ('No user in this name');
+			borno_die ('No user exists in this name');
 		}
 }
 else{

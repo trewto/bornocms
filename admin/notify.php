@@ -10,7 +10,7 @@
 if(isset($_GET['clear']) && $_GET['clear']=='true'){
 	$user_id = loginuserinfo('id');
 	borno_query("DELETE FROM prefix_notify WHERE user_for ={$user_id}");
-	echo "<div class='alert alert-success'>Notification Cleared</div>";
+	echo "<div class='alert alert-success'>Notification(s) cleared</div>";
 
 }
 
@@ -35,19 +35,19 @@ foreach($displays as $display){
 		if($display[4]=='admin'){
 		
 			if(get_the_option('site_permalink')=='getstyle'){
-				echo 'A new comment added in your post "<a href="'.the_post_link($display[1],$a=false).'&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
+				echo 'A new comment has been added in your post "<a href="'.the_post_link($display[1],$a=false).'&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
 				'.the_time($display[5],'h:m A -- d-m-y').'<hr>';
 			}else{
-				echo 'A new comment added in your post "<a href="'.the_post_link($display[1],$a=false).'?&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
+				echo 'A new comment has been added in your post "<a href="'.the_post_link($display[1],$a=false).'?&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
 				'.the_time($display[5],'h:m A -- d-m-y').'<hr>';
 			}
 		}else{
 			if(get_the_option('site_permalink')=='getstyle'){
-			echo 'A new comment added in a post that you are comment..."<a href="'.the_post_link($display[1],$a=false).'&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
+			echo 'A new comment has been added in a post where you made comment."<a href="'.the_post_link($display[1],$a=false).'&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
 			'.the_time($display[5],'h:m A -- d-m-y').'<hr>';
 			}
 			else{
-				echo 'A new comment added in a post that you are comment..."<a href="'.the_post_link($display[1],$a=false).'?&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
+				echo 'A new comment has been added in a post where you made comment."<a href="'.the_post_link($display[1],$a=false).'?&ref=notify">'.get_the_post($display[1],'title').'</a>"<br><i>"'.$display[3].'"</i><br>
 			'.the_time($display[5],'h:m A -- d-m-y').'<hr>';
 			}
 		}

@@ -41,22 +41,22 @@ else{
 					echo '<div class="alert alert-success">Updated</div>';
 					}
 					else{
-						borno_die ('You can not change category' );
+						borno_die ('You can not change this category' );
 					}
 				}
 				else{
-					borno_die ('one category of this name already exists');
+					borno_die ('A category on this name is already existed.');
 				}
 			}
 			else{
 			
-				borno_die ('You can not filled empty this name');
+				borno_die ('You can not make anything blank.');
 			}
 		
 		
 		}
 		else{
-			borno_die ('the cat is not exists');
+			borno_die ('The cat is not exists');
 		
 		}
 	

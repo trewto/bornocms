@@ -12,7 +12,7 @@ include ('functions.php');
 
 #if user not logged in than borno_die()
 if(!user_logged_in()){
-	borno_die('You are not logged in , so why you try to sign out ?');
+	borno_die('You are not logged in.Why are you trying to sign out ?');
 }
 
 #start session

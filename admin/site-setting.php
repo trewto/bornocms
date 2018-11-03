@@ -44,13 +44,13 @@ if(isset($_POST['submit'])){
 			
 			/*	//	Check the email	//	*/
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-				borno_die( 'Invalid email. Please give a correct email');
+				borno_die( 'Invalid email address. Please give a correct email address');
 				$up = false;
 			}
 		
 		/* //	Checking some condition	//*/
 		if(empty($_POST['soaud_number_of_post_display'])){
-			borno_die('empty value of post number of display not allowed');
+			borno_die('Do not make the value of post_display 0');
 		}
 		
 		
@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
 		$int_options = array("options"=>array("min_range"=>1));
 
 		if(!filter_var($_POST['soaud_number_of_post_display'], FILTER_VALIDATE_INT, $int_options)){
-			borno_die('miniman range 1 allow');
+			borno_die('minimum range 1 is allowed');
 		}
 		
 		
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
 		}
 		else{
 			$up = false;
-			$error = 'You can not fill blank the site name ';
+			$error = 'Site name must be filled.';
 		}
 		
 		
@@ -104,7 +104,7 @@ if(isset($_POST['submit'])){
 	
 		}
 		else{
-			$updatewrong =  'Something is wrong to updated';
+			$updatewrong =  'Something is going wrong.';
 		}
 }
 

@@ -31,7 +31,7 @@ $csspack = array();
 
 		//checking error
 		if ($_FILES["file"]["error"] > 0){
-			borno_die('Error Detected'); 
+			borno_die('Error detected'); 
 		}
 		 
 		//if error not found 
@@ -114,7 +114,7 @@ string $comment;
 					!in_array('doc.php',$csspack) ||
 					!in_array('single.php',$csspack)){
 					
-					borno_die('Neccacary packge of theme item not exists');
+					borno_die('Necessary files are not found.');
 					
 					}
 
@@ -137,14 +137,14 @@ string $comment;
 					 *
 					 /* */
 					 //////////working
-					borno_die('theme successfully uploaded','Success');
+					borno_die('Theme is successfully uploaded','Success');
 				 }
 				
 					
 
 				}else{
 					//unlink($file);
-					echo 'Something going wrong';
+					echo 'Something is going wrong';
 				}
 			}
 

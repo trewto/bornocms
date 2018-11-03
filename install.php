@@ -2,8 +2,8 @@
 	/*
 	 *	install.php 
 	 *	
-	 *	@packge:Borno CMS
-	 *	@subpackge:install
+	 *	@package:Borno CMS
+	 *	@sub-package:install
 	 *	
 	 *	
 	 *
@@ -84,7 +84,7 @@
 			*
 			*/
 			
-			echo '<h1>Error to database connection</h1>';
+			echo '<h1>Unable to make connection with database</h1>';
 		}
 		
 		

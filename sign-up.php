@@ -36,7 +36,7 @@
 	 ////////////////////////////////////////////////////////////////////
 	 if(isset($_COOKIE['accountcount']) and $_COOKIE['accountcount']==1){
 	 
-		borno_die('you already create a account in this site . You can not create another account form this computer');
+		borno_die('You already created a account in this site. You can not create another account form this computer.');
 	 }
 	 
 
@@ -59,7 +59,7 @@ echo '<title>Sign Up</title>';
  *
  */
 if(get_the_option('user_can_signup')==false){
-	die('<div class="alert alert-warning container"><center>Signup is currently disable</center></div>');
+	die('<div class="alert alert-warning container"><center>Creating new account is currently disable.</center></div>');
 }
 
 echo '<script src="';
@@ -178,7 +178,7 @@ with (thisform)
 {
 if (validate_email(email,"Not a valid e-mail address!")==false)
   {email.focus();return false;}
- if (validate_username(username,"Invalid Username || You Must entry biggan than 4 letter and less than 12 letter || No space allowed")==false)
+ if (validate_username(username,"Invalid Username || You must have to entry bigger than 4 letter and less than 12 letter || No space allowed")==false)
   {username.focus();return false;}
   if (validate_name(fullname,"Invalid Name || You Must entry Your Full Username")==false)
   {fullname.focus();return false;}
@@ -188,7 +188,7 @@ if (validate_email(email,"Not a valid e-mail address!")==false)
   {password.focus();alert('password not match');return false;}
     if(document.getElementById("checkboxagree").checked==true){
 //alert('true');
-  }else{alert('You must ready to register');return false;}	
+  }else{alert('You must have to be ready to register');return false;}	
 
 }
 }

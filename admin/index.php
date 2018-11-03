@@ -113,7 +113,7 @@ else if(isset($_GET['pages'])){
 
 
 }
-$theme = 'jsc_admin';
+$theme = defined('THEME_DATA') ? THEME_DATA : 'jsc_admin';
 include('theme/'.$theme.'/header.php');
 //include($include);
 //footer php 

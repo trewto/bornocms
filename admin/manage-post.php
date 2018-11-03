@@ -2,7 +2,7 @@
 if(isset($_GET['coming'])){
 	if($_GET['coming']=='newpost'){
 	echo  '<div class="alert alert-block alert-success fade in sinnup-warning">
-            <strong>Congratulation ! You made a new airticle</strong></div>';
+            <strong>Congratulation! You have written a new article.</strong></div>';
 	}
 }
 $user_id = loginuserinfo('id');;
@@ -60,15 +60,15 @@ $total_trash  = mysqli_num_rows($query);
 		
 		
 			case 'restore':
-				echo "<div class='alert alert-success'>Content Successfully Restore</div>";
+				echo "<div class='alert alert-success'>Content successfully restored</div>";
 			
 			break;
 			case 'trash':
-				echo "<div class='alert alert-success'>Content Successfully Trash</div>";
+				echo "<div class='alert alert-success'>Content successfully trashed</div>";
 			
 			break;
 			case 'delete':
-				echo "<div class='alert alert-success'>Content Successfully DELETED</div>";
+				echo "<div class='alert alert-success'>Content successfully deleted</div>";
 			
 			break;
 		

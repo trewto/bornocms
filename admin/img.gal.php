@@ -45,7 +45,7 @@ if(isset($_GET['del']) && $_GET['del']>0){
 				if(file_exists($full_img)){
 					//delete big img
 					unlink($full_img);
-					echo '<br>Full img deleted<br>';
+					echo '<br>Image is deleted<br>';
 				}
 								borno_query("DELETE FROM prefix_photo  WHERE id={$row['id']}");
 
@@ -201,7 +201,7 @@ if(isset($_GET['per_page'])){
 	
 	}
 	else{
-		$die = ('<hr>invalid number of per page<hr>');
+		$die = ('<hr>Invalid number for per page<hr>');
 	}
 }else{
 	$per_page = 10;

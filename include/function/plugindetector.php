@@ -23,7 +23,7 @@ function plugin_func(){
 
 
 
-$user = 'Plugin Name'; //get this value from wherever it is you get it
+$user = 'Plug-in Name'; //get this value from wherever it is you get it
 
 /**
 *	Theme theme directory

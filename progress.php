@@ -1,7 +1,7 @@
 <?Php
 /*
 *	Progress
-*	@packge Borno CMS
+*	@package Borno CMS
 *	@author Arnob Roy
 *
 *
@@ -31,7 +31,7 @@ if(!isset($_SERVER['HTTP_REFERER'])){
 		//if not isset $_GET['key'] and $_SERVER['HTTP_REFERER'] than die();
 		// die() ->  borno_die();
 		// use borno_die(); functino
-		borno_die('Ops! you can not access this page manualy');
+		borno_die('Ops! you can not access this page manually.');
 	}	
 }
 
@@ -88,7 +88,7 @@ if(isset($_POST['forgetpassword'])){
 			
 			
 			$message="Dear user, 
-			You request for you account Password . Click this link to continue to getthing password
+			You have requested for you Password. By clicking the next link you can continue this process. 
 			<a href='".get_the_option('site_address')."/sign-in.php?key=".$key."'>Click The Link</a>
 			Thanks
 			";# the message
@@ -102,7 +102,7 @@ if(isset($_POST['forgetpassword'])){
 			}
 			else{//if mail not sent success fully
 			
-				 $msg = 'Unable To Reset password';
+				 $msg = 'Unable To Reset password. We can not send the mail';
 
 				 }
 		}
@@ -127,7 +127,7 @@ if(isset($_POST['forgetpassword'])){
 	}
 	else{
 	
-		$_SESSION['forget_pass'] ='We sent a mail in your mail address';
+		$_SESSION['forget_pass'] ='We have sent a mail in your mail address.';
 	
 	}
 	header('Location:sign-in.php?forget=true');//sending to the sign in page 
@@ -204,12 +204,11 @@ else if(isset($_GET['key'])){
 			
 			$message="Dear user, 
 			<br>
-			Your password is been reset . this is your new login information .
-			Login Info
+			Your password has been reset. Here is your account information:
 			Email : ".$row['email']."  <br>
 			Password : ".$new_password." <br>
-			<a href='".get_the_option('site_address')."/sign-in.php'>Sign In</a> <br>
-			";//msg with new password
+			<a href='".get_the_option('site_address')."/sign-in.php'>Sign in</a> <br>
+			";//email with new password
 			
 			/**
 			 *
@@ -229,7 +228,7 @@ else if(isset($_GET['key'])){
 					$new_count = $get_count +1 ;
 					update_user($row['id'],'reset_pass',$new_count);	
 				// message
-				$msg ='Successfully password updated';
+				$msg ='Your password has updated successfully.';
 				
 				
 			}
@@ -239,7 +238,7 @@ else if(isset($_GET['key'])){
 			}
 	}
 	else{	// if the key not existing in our database echo the message
-	 $msg = 'Invalid active key';
+	 $msg = 'The activation key is invalid.';
 	}
 	
 	if(isset($msg)){
@@ -271,7 +270,7 @@ else if(isset($_GET['signup'])){
 
 	if(isset($_COOKIE['accountcount']) and $_COOKIE['accountcount']==1){
 	 
-		die('you already create a account in this site');//multiple account not allowed
+		die('Multiple account is not allowed. You have already created an account from this computer.');//multiple account not allowed
 	 }
 	 
 	 
@@ -363,12 +362,12 @@ if(isset($_POST['signup'])){
 													$to = $email;
 													//message
 													$message="Dear user, <br>
-													It is Your New Password ".$new_password."<br>
-													Login Info<br>
+													Here is your password ".$new_password."<br>
+													Account Info<br>
 													Email =". $email."<br>
 													Password = **********<br>
-													<a href='".get_the_option('site_address')."/sign-in.php?active_account=".$user_active_key."'>Verify Account</a>
-													";
+													Please verify the account from the next link.
+													<a href='".get_the_option('site_address')."/sign-in.php?active_account=".$user_active_key."'>Verify Account</a>";
 													
 													
 													/**
@@ -383,21 +382,21 @@ if(isset($_POST['signup'])){
 													$_SESSION['signup_done'] = true;
 													
 													
-														$msgw ='<div class="alert alert-success">An auto Generate mail sent into your mail box. check it and verify your account</div>';
+														$msgw ='<div class="alert alert-success">An auto--generate mail has been sent into your mail box. Check that and verify your account</div>';
 														
 														
 													}
 													else{//if mail not sent success fully
 													
-													$_SESSION['signup_done'] = true;
-														$msgw ='<div class="alert alert-warning">There are a mail server error so mail failed . you can not verify your account. But Your account is created . Contact to  the site admin for 
-														active  your account</div>';
+														$_SESSION['signup_done'] = true;
+														$msgw ='<div class="alert alert-warning">There are a mail server error, the process of sending mail is failed. So you can not verify your account. But Your account is created . Contact with the site administrator to 
+														active your account</div>';
 														
 													}
 												//welcome mail end
 													$world  =  '<div class="alert alert-danger  width-300">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-															Your account successfully added
+															Your account has been successfully created.
 															</div>  ';
 															
 														//Calculate 60 days in the future
@@ -412,7 +411,7 @@ if(isset($_POST['signup'])){
 											else{
 													$msg = '	<div class="alert alert-danger">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-															Email or username already exists
+															The email or username you filled is already exists.
 															</div>  ';
 											
 												//echo 'email or username already exists';
@@ -422,7 +421,7 @@ if(isset($_POST['signup'])){
 										else{
 											$msg = '	<div class="alert alert-danger">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-															You must agreed with our term and condition
+															You have to agree with the site conditions.
 															</div>  ';
 											//echo 'You must agreed with our term and condition';
 										}
@@ -431,14 +430,14 @@ if(isset($_POST['signup'])){
 									else{
 											$msg = '	<div class="alert alert-danger">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-																Invalid captcha
+																Invalid captcha.
 															</div>  ';
 									}
 								}						
 								else{
 											$msg = '	<div class="alert alert-danger">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-														Invalid email
+														Invalid email address.
 															</div>  ';
 								}
 						}
@@ -446,7 +445,7 @@ if(isset($_POST['signup'])){
 						
 								$msg = '	<div class="alert alert-danger">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-															invalid Name
+															Invalid name.
 															</div>  ';
 							}
 						
@@ -455,7 +454,7 @@ if(isset($_POST['signup'])){
 					 {
 						$msg = '	<div class="alert alert-danger">
 															<button type="button" class="close" data-dismiss="alert">&times;</button>
-														invalid caracter please inset a corect name
+														Invalid character. Please fill a proper name.
 															</div>  ';
 					 }
 				 }
@@ -463,14 +462,14 @@ if(isset($_POST['signup'])){
 			else{
 			$msg = '	<div class="alert alert-danger">
 														<button type="button" class="close" data-dismiss="alert">&times;</button>
-													invalid username
+													Invalid username.
 														</div>  ';
 			}
 		}
 		else{
 			$msg = '	<div class="alert alert-danger">
 														<button type="button" class="close" data-dismiss="alert">&times;</button>
-													invalid username
+													Invalid username
 														</div>  ';
 		}
 
@@ -481,7 +480,7 @@ if(isset($_POST['signup'])){
 	
 			$msg = '	<div class="alert alert-danger">
 														<button type="button" class="close" data-dismiss="alert">&times;</button>
-														All field is required
+														All field is required.
 														</div>  ';
 	}
 
@@ -530,13 +529,13 @@ else if(isset($_GET['active_account'])){
 		
 		update_user($user_id,'account_active','1');
 		
-		$msg = 'Account Actived';
+		$msg = 'Account Activated';
 		
 	}
 	
 	else{
 	
-	$msg = 'invalid key';
+	$msg = 'Invalid key';
 	
 	}
 	

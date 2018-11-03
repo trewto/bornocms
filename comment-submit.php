@@ -21,7 +21,7 @@
 	*	Check http referer
 	*/
 	if(!isset($_SERVER['HTTP_REFERER'])){
-		borno_die('Why You trying this?'); //die
+		borno_die('Why are you trying this? You have invalid refer.'); //die
 	}
 
 	
@@ -34,7 +34,7 @@
 	*/
 	 
 	if(!isset($_POST['comment']) or !isset ($_POST['content']) or !isset($_POST['post_id']) or empty($_POST['content'])){
-		borno_die('You can not submit empty comment');//die
+		borno_die('You can not submit a blank comment');//die
 	}
 	
 	
@@ -53,7 +53,7 @@
 	$int_options = array("options"=>array("min_range"=>1));//option of min range for that user not insert -1,-2... post number
 
 	if(!filter_var($_POST['post_id'], FILTER_VALIDATE_INT, $int_options)){
-		borno_die('Why you canged the post id ?');//die
+		borno_die('Oh, the system think you have changed the post id.');//die
 	}
 
 	
@@ -70,7 +70,7 @@
 	 *	is_exists_content()
 	 */
 	if(!is_exists_content($_POST['post_id'])){
-		borno_die('Ups no content exists ?');//die
+		borno_die('No content exists on this id number. Invalid action.');//die
 	}
 
 	
@@ -81,11 +81,11 @@
 	/*
 	 *
 	 *
-	 *	check comment is open on that post
+	 *	make sure that comment is open on that post
 	 *	get_the_post($post_id,$thefieldthatyouwanttoget) 
 	 */
 	if(!get_the_post($_POST['post_id'],'comment_permission')=='true'){
-		borno_die('Permission error');//die
+		borno_die('You can not comment here.');//die
 	}
 	
 	
@@ -120,7 +120,7 @@
 			}else{
 
 			
-				borno_die('You can do only 10 comment in a minute.');
+				borno_die('You can do only ten comment in a minute.');
 			}
 		}
 	}else{

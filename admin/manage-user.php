@@ -63,7 +63,7 @@ if(isset($_GET['limit'])){
 
 if(isset($_GET['msg']) && $_GET['msg']=='delete'){
 
-	echo "<div class='alert alert-success'>Successfully DELETED</div>";
+	echo "<div class='alert alert-success'>Successfully deleted.</div>";
 }
 
 ?>
@@ -82,7 +82,7 @@ if(isset($_GET['msg']) && $_GET['msg']=='delete'){
 		</div>
     </form><br>
 	<?php
-echo '<a href="?pages=manageuser"><span class="label label-success"> Total USER  '.$count.'</span></a> ';
+echo '<a href="?pages=manageuser"><span class="label label-success"> Total users  '.$count.'</span></a> ';
 
 echo ' <a href="?pages=manageuser&viewtype=admin"><span class="label label-success"> Admin  '.$admincount.'</span></a>';
 
@@ -90,7 +90,7 @@ echo ' <a href="?pages=manageuser&viewtype=admin"><span class="label label-succe
 
 //echo ' <a href="?pages=manageuser&viewtype=levelzero"><span class="label label-success"> Level Zero  '.$level3.'</span></a>';
 
-echo ' <a href="?pages=manageuser&viewtype=disble"><span class="label label-success"> Disble account  '.$disblecount.'</span></a>';
+echo ' <a href="?pages=manageuser&viewtype=disble"><span class="label label-success"> Disable account  '.$disblecount.'</span></a>';
 
 echo ' <a href="?pages=manageuser&viewtype=enable"><span class="label label-success"> Enable account  '.$enablecount.'</span></a>';
 
