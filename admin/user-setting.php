@@ -15,9 +15,9 @@ if(isset($_POST['submit']))	{
 	*	if not isset $_POST['name'] or $_POST['about'] than die
 	*
 	*/
-	if(!isset($_POST['name'])){borno_die('Error . Something wrong');}
+	if(!isset($_POST['name'])){borno_die('Error. Something is going wrong');}
 	
-	if(!isset($_POST['about'])){borno_die('Error . Something wrong');}
+	if(!isset($_POST['about'])){borno_die('Error. Something is going wrong');}
 	
 	/*
 	*	Current user id

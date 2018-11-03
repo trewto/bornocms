@@ -77,7 +77,7 @@ function site_install($create){
 		if(!empty($dbname) && !empty($dbuser) &&  !empty($username) && !empty($email) && !empty($password) && !empty($prefix) && $password == $repassword && $emails=='ok'){
 			$connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 			if (!$connection){
-					echo '<div class="form-install">Wrong database information. Check it and try again
+					echo '<div class="form-install">Wrong database information. Check it and try again. 
 						<a href="install.php" class="btn">Try Again</a>
 						</div>';
 			}
@@ -114,7 +114,7 @@ function site_install($create){
 *	
 *	The configuration file of Borno CMS
 *	You can setting your site configuration from here . You can
-*	change mysql information , db and prfix infomation , logkey
+*	change mysql information , db and prefix information , logkey
 *	information form this file.
 *	Logkey is the unique key of your site .
 */
@@ -129,7 +129,7 @@ function site_install($create){
 									$writeaction.=" array(
 // Database name
 
-// /* You can get the information form your host provider */ //
+// /* You can get this information form your hosting provider */ //
 'DBNAME' => '".$dbname."',
 
 //Database password
@@ -330,7 +330,7 @@ RewriteRule . ".$htfolder."index.php [L]
 								
 								}
 								change_config();
-							die('<div class="form-install">The Site is already istalled . To freash install clean the database</div>');
+							die('<div class="form-install">The site is already installed.</div>');
 
 						}
 
@@ -739,8 +739,8 @@ RewriteRule . ".$htfolder."index.php [L]
 									$address = str_replace( '/install.php', '', $siteUrl );
 									
 								/// insert into options page $optiontable
-								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('site_name' , 'Borno CMS!')");
-								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('site_description' , 'A power-full content management system')");
+								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('site_name' , 'Borno CMS')");
+								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('site_description' , 'Content management system.')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('site_email' , '$email')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('installed_ip' , '$user_ip')");
 								mysqli_query($connection,"INSERT INTO $optiontable (`name` , `value`) VALUES ('installed_browser' , $user_agent)");
@@ -782,7 +782,7 @@ RewriteRule . ".$htfolder."index.php [L]
 										//welcome post content
 										$title  = 'Hello World!';
 										$content = 'Hello user , This is your new website and it is a sample post . Please delete it and start blogging .';
-										mysqli_query($connection,"INSERT INTO $contenttable (`user_id`, `title`, `content`, `post_status`, `post_level`, `post_password`, `comment_permission`, `browser_info`, `ip`, `edited`,`active_key`) VALUES ( '$rand_user', '$title', '$content', 'publish','public','', 'false', 'Its an auto genatate post', '$user_ip','false','$active_key')");
+										mysqli_query($connection,"INSERT INTO $contenttable (`user_id`, `title`, `content`, `post_status`, `post_level`, `post_password`, `comment_permission`, `browser_info`, `ip`, `edited`,`active_key`) VALUES ( '$rand_user', '$title', '$content', 'publish','public','', 'false', 'Its an auto generate content', '$user_ip','false','$active_key')");
 									}
 									mysqli_query($connection," INSERT INTO $doctable (
 `id` ,
@@ -797,7 +797,7 @@ RewriteRule . ".$htfolder."index.php [L]
 `times`
 )
 VALUES (
-'1', '1', 'About', 'This is about page', 'publish', 'auto genarated', '$user_ip', 'false', '$active_key',
+'1', '1', 'About', 'This is about page', 'publish', 'auto generated', '$user_ip', 'false', '$active_key',
 CURRENT_TIMESTAMP
 )");
 								
@@ -1035,14 +1035,14 @@ else{
 								}
 								else {
 								//echo 'Doesn\'t exist';
-								die('<h1>Error to database connection</h1>');
+								die('<h1>Error to make database connection</h1>');
 								}
 						}
 						else{
 							// if no table found
 							//$install = true;
 						//	echo 'not table file name installed';
-						die( '<h1>Error to database connection</h1>');
+						die( '<h1>Error to make database connection</h1>');
 						}
 						
 			}
@@ -1050,13 +1050,13 @@ else{
 				// if not connect to db
 				//$install = true ;
 				//echo 'no db in this name';
-				die('<h1>Error to database connection</h1>');
+				die('<h1>Error to make database connection</h1>');
 			}
 		}
 		}
 		else{
 		
-		die('<h1>Error to database connection</h1>');
+		die('<h1>Error to make database connection</h1>');
 		}
 		
 	if($install== false){
@@ -1149,14 +1149,14 @@ if(file_exists('config.php')){
 		$cpermalink = $prefix.'cpermalink';		
 		}
 		else{
-			die('ERROR TO CONNECT');
+			die('Error to make connection.');
 			
 		}
 		
 		
 }
 else{
-	die('ERROR IN THIS SITE');
+	die('Something is going wrong.');
 }
 }
 $connection = @mysqli_connect($dbconnect['DBHOST'],$dbconnect['DBUSER'],$dbconnect['DBPASS'],$dbconnect['DBNAME']);

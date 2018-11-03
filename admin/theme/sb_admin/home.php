@@ -45,7 +45,7 @@
 							?>
 							
 							
-							
+							<?php /*
 				<!--
 				This is admin panel home
 				-->
@@ -60,7 +60,7 @@
                     </div>
                 </div>   
 				-->
-				
+				*/  ?>
 				
 			<hr />
 			
@@ -161,7 +161,7 @@
             </div>
 			
 			
-			
+			<?php /*
 			<!--
 			 <div class="row">
                 
@@ -194,7 +194,7 @@
 		
             </div>
 			-->
-			
+			*/?>
 			
 			 <div class="row">
                 

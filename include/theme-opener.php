@@ -1,17 +1,17 @@
 <?php
 /*
  *	Theme Opener
- *	Opening the spefic php file by the request
+ *	Opening the specific php file by the request
  *	Opening the theme
  *
  *
- *	There are two url style
+ *	There are two url styles
  *	One is basic get method , and another is the
  *	htaccess permalink . you can change it form
  *	site setting of admin panel
  *
  *
- *	@packge Borno CMS
+ *	@package Borno CMS
  *	@since  1.0
  *
  *
@@ -286,7 +286,7 @@ if(defined("INCLUDE_THEME")){
 
 //$include= the header php
  if(isset($error404)){
-	$title = '404 Not found';
+	$title = '404 not found';
 	$include=('404.php');
 	$function_page = '404';
 }
