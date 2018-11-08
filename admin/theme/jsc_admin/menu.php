@@ -8,7 +8,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-		 <a class="brand" href="<?php echo admin_url(); ?>">Admin</a>
+		 <a class="brand" href="<?php echo admin_url(); ?>">Administration</a>
 
 			 <div class="nav-collapse collapse">
 
@@ -25,13 +25,13 @@
 						<!-- content menu -->	
 				<?php if(user_can('edit_own_post') or user_can('edit_all_post') or user_can('new_post')  or user_can('edit_category') or user_can('add_category') or anp_page_array_count("content")!=0) { ?>
                     <li class="dropdown">
-                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Content <b class="caret"></b></a>
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Article <b class="caret"></b></a>
 					 <ul class="dropdown-menu" role="menu" aria-labelledby="drop1" >
 						<?php if(user_can('new_post')){?>
                         <li><a href="<?php echo admin_url() ?>/?pages=editor">Add New</a></li>
 						<?php } ?>
 						<?php  if(user_can('edit_own_post') or user_can('edit_all_post')) {?>
-                        <li><a href="<?php echo admin_url() ?>/?pages=managepost&by=user">Manage Content</a></li>
+                        <li><a href="<?php echo admin_url() ?>/?pages=managepost&by=user">Manage Articles</a></li>
 						<?php } ?>
 						<?php  if(user_can('add_category')) {?>
                         <li><a href="<?php echo admin_url() ?>/?pages=addcat">Add Category</a></li>
@@ -58,8 +58,8 @@
 				  	
 						<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Document <b class="caret"></b></a>
                        <ul class="dropdown-menu" role="menu" aria-labelledby="drop1" >
-                        <li><a   href="<?php echo admin_url() ?>/?pages=doceditor">Add New Doc</a></li>
-                        <li><a   href="<?php echo admin_url() ?>/?pages=managedoc">Manage Doc</a></li>
+                        <li><a   href="<?php echo admin_url() ?>/?pages=doceditor">Add New</a></li>
+                        <li><a   href="<?php echo admin_url() ?>/?pages=managedoc">Manage</a></li>
 						 <?php anp_the_page_ul_li("doc"); ?> 
                       </ul>
                     </li>

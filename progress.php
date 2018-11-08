@@ -30,8 +30,8 @@ if(!isset($_SERVER['HTTP_REFERER'])){
 	else{
 		//if not isset $_GET['key'] and $_SERVER['HTTP_REFERER'] than die();
 		// die() ->  borno_die();
-		// use borno_die(); functino
-		borno_die('Ops! you can not access this page manually.');
+		// use borno_die(); function
+		borno_die('Ops! you can not access this page.');
 	}	
 }
 
@@ -88,7 +88,7 @@ if(isset($_POST['forgetpassword'])){
 			
 			
 			$message="Dear user, 
-			You have requested for you Password. By clicking the next link you can continue this process. 
+			You have requested for you Password. By clicking the next link you can do that. 
 			<a href='".get_the_option('site_address')."/sign-in.php?key=".$key."'>Click The Link</a>
 			Thanks
 			";# the message
@@ -228,7 +228,7 @@ else if(isset($_GET['key'])){
 					$new_count = $get_count +1 ;
 					update_user($row['id'],'reset_pass',$new_count);	
 				// message
-				$msg ='Your password has updated successfully.';
+				$msg ='Your password has been updated successfully.';
 				
 				
 			}

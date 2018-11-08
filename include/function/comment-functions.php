@@ -210,7 +210,10 @@ if(filter_var($post_id, FILTER_VALIDATE_INT, $int_options)){
 				$nclas = "admin_author";
 			}else{
 				$nclas = "guest_author";
-			}
+			} 
+			$url_profile = (get_the_option('site_permalink')== 'dynamic') ? '/profile/' : '/?profile=';
+			//echo $url_profile;
+			
 				echo '<a href="'.$site_address.$url_profile.$username.'" class="label label-warning '.$nclas.'">'.$name.'</a> ';
 			
 			//echo '<a class="comment-timex label label-warningx" href="'.$site_address.$post_GET.$post_id.'/#comment-'.$row['id'].'">';

@@ -21,8 +21,8 @@
 				echo ' ,<br>  Write by ';
 				echo the_user_link(the_post_user('id'));
 				echo ' ,  <br>' ;
-				echo post_visit_count($post_id);
-				echo ' View , <br>';
+			//	echo post_visit_count($post_id);
+				//echo ' View , <br>';
 				echo count_the_post_comment($post_id); 
 				echo ' Comment , <br> ';
 				echo the_post_cat($post_id);
