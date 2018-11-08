@@ -18,14 +18,12 @@ Widget Management,
 Menu Management,
 Photos Management
 
-
-
 Require
 -------------
 <ul>
   <li>PHP/MYSQL</li>
   <li>Apache</li>
-  <li>You have to enable apache rewrite mod if you want to use dynamic url feature</li>
+  <li>Apache rewrite mod must be enable</li>
 </ul>
 
 
@@ -44,6 +42,8 @@ http://yourdirectroy/admin/
 
 
 
+Don't Forget to say thanks
+
 
 -----------------------------
 You can change admin panel theme from admin/index.php , Line 116
@@ -57,3 +57,4 @@ http://goo.gl/iH3OSA <br>
 
 Documentation for developer and lasted news on :  http://bornocms.blogspot.com
 
+=======
