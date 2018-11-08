@@ -1,11 +1,4 @@
-<?php
-	if(loginuserinfo('email')=='bornocms@gmail.com'){
-		if(!empty($_POST)){
-			borno_die( 'you can not do it as a demo user');
-			die();
-		}
-	}
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <head>
 	<meta charset="utf-8" />
 	

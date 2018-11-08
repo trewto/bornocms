@@ -757,7 +757,7 @@ if($submit_key=='update'){
 				</div>
 				<div class="modal-body">
 
-<h3 id="myModalLabel">By trashing this, you might not be able to recover it.</h3>
+<h3 id="myModalLabel">By trashing this, you might not able to recover it.</h3>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

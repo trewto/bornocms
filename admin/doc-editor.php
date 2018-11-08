@@ -30,7 +30,7 @@ if(user_can('manage_doc')){
 		$permission = "";
 		$edit_id = $_GET['editdoc'] ;
 		 if(!filter_var($edit_id, FILTER_VALIDATE_INT)){
-			borno_die('Invalid document id');
+			borno_die('Invalid post id');
 		 }
 		 else{
 		 

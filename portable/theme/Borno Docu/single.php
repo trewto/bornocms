@@ -23,8 +23,8 @@
 				echo ' , By ';
 				echo the_user_link(the_post_user('id'));
 				echo '  <br>' ;
-				//echo post_visit_count($post_id);
-				//echo ' View , '; 
+				echo post_visit_count($post_id);
+				echo ' View , ';
 				echo the_post_cat($post_id);
 			?>
 			

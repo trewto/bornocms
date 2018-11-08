@@ -103,12 +103,12 @@ else if(isset($_GET['pages'])){
 		$title =  anp_get_the_page($action , 1);
 	}
 	else if(!req_get_count()==0){
-		borno_die('You are in a wrong page');
+		borno_die('You enter a wrong page');
 	}
 	
 	else{
 		$include=('theme/home.php');
-			$title = 'Home';
+			$title = 'Admin Home';
 	}	
 
 
