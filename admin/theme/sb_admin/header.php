@@ -67,7 +67,7 @@
                 </button>
 				
 				<!-- Display the admin panel title -->
-                <a class="navbar-brand" href="<?php echo get_the_option('site_address'); ?>">Borno Admin</a>
+                <a class="navbar-brand" href="<?php echo get_the_option('site_address'); ?>">Administration</a>
 				
             </div>
 			

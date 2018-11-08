@@ -158,7 +158,7 @@ if(isset($updatewrong)){
 
 <tr>
 	<td>
-		<label for="address">Website Address</label>
+		<label for="address">Address</label>
 		<!--<i>You can not change this</i>-->
 	</td>
 	<td>
@@ -168,7 +168,7 @@ if(isset($updatewrong)){
 
 <tr>	
 	<td>
-		<label for="sitename">Website Name</label>
+		<label for="sitename">Name</label>
 		<!--<i>Insert Your site Name</i>-->
 	</td>
 	<td>	
@@ -179,7 +179,7 @@ if(isset($updatewrong)){
 
 <tr>	
 	<td>
-		<label for="description">Website Description</label>
+		<label for="description">Description</label>
 		<!--<i>Insert Your site description</i>-->
 	</td>
 	<td>
@@ -189,7 +189,7 @@ if(isset($updatewrong)){
 
 <tr>	
 	<td>
-		<label for="site_mail">Website Email</label>
+		<label for="site_mail">Official email</label>
 	<!--	<i>Insert Your site email  ..</i>-->
 	</td>
 	<td>
@@ -199,7 +199,7 @@ if(isset($updatewrong)){
 
 <tr>	
 	<td>
-		<label for="post_approvel">Content Approval System </label>
+		<label for="post_approvel">Approval </label>
 	</td>
 	<td>
 		<?php
@@ -213,13 +213,15 @@ if(isset($updatewrong)){
 
 <tr>	
 	<td>	
-		<label for="post_approvel">Enable Contact form </label>
+		<label for="post_approvel">Contact form </label>
 		<!--<i>Enable Contact Form in your site</i>-->
 	</td>
 	<td>
 	<?php
-		$array = array('true','false');
-		$valuearray = array('Yes','No');
+		//$array = array('true','false');
+		$array = array('false');
+		//$valuearray = array('Enable','Disable');
+		$valuearray = array('Disable');
 
 		echo _site_option_auto_update_option_display('contactfrom' , $array,$valuearray ,true,false);
 	?>
@@ -229,13 +231,13 @@ if(isset($updatewrong)){
 
 <tr>	
 	<td>	
-		<label for="post_revision">Enable Content Revision System </label>
+		<label for="post_revision">Revision </label>
 		<!--<i>If it enable all post and document log save on your database. You can see the revision of any content or document</i>-->
 	</td>
 	<td>
 	<?php
 	$array = array('true','false');
-	$valuearray = array('Yes','No');
+	$valuearray = array('Enable','Disable');
 
 	echo _site_option_auto_update_option_display('post_revision' , $array,$valuearray ,true,false);
 	?>
@@ -244,7 +246,7 @@ if(isset($updatewrong)){
 
 <tr>	
 	<td>
-		TimeZone<br>
+		Timezone<br>
 		<!--<i>Select your country timezone	</i>-->
 	</td>
 	<td>
@@ -293,7 +295,7 @@ if(isset($updatewrong)){
 
 <tr>
 	<td>
-		Registration Page 
+		Registration 
 		<!--<br><i>User can register in your site ?</i>-->
 	</td>
 	<td>
@@ -317,7 +319,7 @@ if(isset($updatewrong)){
 		?>
 	</td>
 </tr>
-<!--
+
 	<tr>
 		<td>Theme Folder Name
 			<br>
@@ -328,7 +330,7 @@ if(isset($updatewrong)){
 			</i>
 		</td>
 		<td><?php echo _site_option_auto_update_display('theme_folder_name',true,true);?></td>
-	</tr>-->
+	</tr> 
 	<tr>
 	<td>Content per page
 			<br>

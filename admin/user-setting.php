@@ -40,7 +40,7 @@ if(isset($_POST['submit']))	{
 				/*
 				*	Display Confirmation message
 				*/
-				echo '<div class="alert alert-success">You have successfully changed this.</div>';
+				echo '<div class="alert alert-success">You have successfully changed.</div>';
 			}
 			else{
 				/*
@@ -70,7 +70,7 @@ if(isset($_POST['submit']))	{
 
 	<!--MENU-->
 	<b>Profile Setting || <a href="?pages=changepassword">Change Password</a></b>
-	<b>||<a href="?pages=changesocial">Change Social Profile</a></b><br>
+	<b><!--||<a href="?pages=changesocial">Change Social Profile</a>--></b><br>
 	
 		<!--TABLE-->
 			<table class="table table-hover table-bordered">

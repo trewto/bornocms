@@ -25,6 +25,21 @@
 			
 			
 			
+			
+			6 nov 2k18
+			- Visit count disabled to make the cms faster, we can enable it when require from theme opener .php line 308
+			- disabled contact/feedback mail system to make the mail server more secure, we can enable it when require
+			- Removed most of the logo/text named borno cms to make the cms friendly
+			- removed popular content widgets
+			- fixed comment section link problem 
+			- updated languages/lines
+			- Should i disable feed ?
+			- Updated installation page
+			- thiking of database optimization
+			- disabled social link of a user.
+			- added demo user for the email bornocms@gmail.com in jsc_admin theme
+			
+			
 	
 	*/	
 ?>

@@ -14,8 +14,8 @@
 						echo ' , Category: ';
 						echo the_post_cat($post_id);
 						echo '  <br>' ;
-						echo post_visit_count($post_id);
-						echo ' View  , ';
+						//echo post_visit_count($post_id);
+						//echo ' View  , ';
 						echo count_the_post_comment($post_id); 
 						echo ' Comment  ';
 						echo content_edit_link($post_id,get_the_option('site_address'),loginuserinfo('id'));

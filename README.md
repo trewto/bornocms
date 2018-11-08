@@ -1,6 +1,6 @@
 Borno CMS
 ================
-Borno is an opensource content management system
+Borno is an open source content management system
 
 Feature
 -------------
@@ -116,15 +116,15 @@ ReadyMade widget
 Menu
 
     Parent Menu
-    Two level deep submenu
+    Two level deep sub menu
 
 Photos 
 
     Manage photo
     Upload photo
     Delete photo
-    photo capabilites
-    Gellary
+    photo capabilities
+    Gallery
 
 
 
@@ -170,8 +170,6 @@ http://yourdirectroy/admin/
 
 
 
-Don't Forget to say thanks
-
 
 -----------------------------
 You can change admin panel theme from admin/index.php , Line 116
@@ -180,13 +178,8 @@ There are two theme , sb_admin and jsc_admin
 
 Download Plugins and Themes
 ---------------
-Temporay themes and plugins are avilable here  - 
+Themes and plugins are available in here  - 
 http://goo.gl/iH3OSA <br>
-Sample : http://borno.webdesigncr3ator.com/<br>
-Documention and lasted news on :  http://bornocms.blogspot.com
 
-Contact us
----------------
-Email bornocms@gmail.com
-
+Documentation and lasted news on :  http://bornocms.blogspot.com
 
