@@ -1,6 +1,8 @@
 Borno CMS
 ================
 Borno is acon tent management system
+=======
+Borno is an open-source content management system
 
 Feature
 -------------
@@ -57,3 +59,4 @@ http://goo.gl/iH3OSA <br>
 
 Documentation for developer and lasted news on :  http://bornocms.blogspot.com
 
+=======
