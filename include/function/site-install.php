@@ -72,7 +72,7 @@ function site_install($create){
 		}
 		else{
 				$emails ='wrong';
-				echo '<div class="form-install"><h4>Please insert a valid email address</h4></div>';
+				echo '<div class="form-install"><h4>Please insert an valid email</h4></div>';
 		}
 		if(!empty($dbname) && !empty($dbuser) &&  !empty($username) && !empty($email) && !empty($password) && !empty($prefix) && $password == $repassword && $emails=='ok'){
 			$connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
@@ -819,7 +819,7 @@ CURRENT_TIMESTAMP
 			}
 		}
 		else{
-		echo '<div class="form-install"><h4>Check all inputs.</h4> <br>
+		echo '<div class="form-install"><h4>Mistake!Check all inputs.</h4> <br>
 				<a href="install.php" class="btn">Try Again</a>
 		</div>';
 		}
@@ -827,24 +827,22 @@ CURRENT_TIMESTAMP
 	else{
 	?>
 		<form method="POST" class="form-install " action="">
-		<!--<h2>Borno CMS</h2>-->
-		<!--<p>Borno CMS</p>-->
-		<h3>Installation</h3><br>
-		<label for="dbhost">Database Host</label>
-		<input  class="span4" id="dbhost" type="text" name="dbhost"/>
-		<label for="dbuser">Database User</label>
-		<input name="dbuser" class="span4" id="dbuser" type="text" />
-		<label for="dbpass">Database Pass</label>
-		<input name="dbpass" class="span4" id="dbpass" type="text" />
-		
-		
+		<h2>Install</h2>
+		<p>Borno CMS</p>
+		<p>Fill up to form. Insert your database information.</p>
 		<label for="dbname">Database Name</label>
 		<input name="dbname" class="span4" id="dbname" type="text" />
+		<label for="dbpass">Database Pass</label>
+		<input name="dbpass" class="span4" id="dbpass" type="text" />
+		<label for="dbuser">Database User</label>
+		<input name="dbuser" class="span4" id="dbuser" type="text" />
+		<label for="dbhost">Database Host</label>
+		<input  class="span4" id="dbhost" type="text" name="dbhost"/>
 		<br><br>
 		<label for="prefix">Table Prefix</label>
 		<input name="prefix" class="span4" id="prefix" value="borno_" type="text" />
 		<br><br>
-		<h4>Admin information</h4><br>
+		<h4>Insert the admin information</h4>
 		<label for="username">User Name</label>
 		<input name="username" class="span4" id="username" type="text" />
 		<label for="email">Email</label>
@@ -977,7 +975,7 @@ else{
 	//}	
 
 	if ((!$connection)){
-			die('<h1>Error to make a database connection</h1>');
+			die('<h1>Error to database connection</h1>');
 		}
 		if($connection){
 			//if correctly get database information
@@ -1037,14 +1035,14 @@ else{
 								}
 								else {
 								//echo 'Doesn\'t exist';
-								die('<h1>Error to make a database connection</h1>');
+								die('<h1>Error to make database connection</h1>');
 								}
 						}
 						else{
 							// if no table found
 							//$install = true;
 						//	echo 'not table file name installed';
-						die( '<h1>Error to make a database connection</h1>');
+						die( '<h1>Error to make database connection</h1>');
 						}
 						
 			}
@@ -1052,13 +1050,13 @@ else{
 				// if not connect to db
 				//$install = true ;
 				//echo 'no db in this name';
-				die('<h1>Error to make a database connection</h1>');
+				die('<h1>Error to make database connection</h1>');
 			}
 		}
 		}
 		else{
 		
-		die('<h1>Error to make a database connection</h1>');
+		die('<h1>Error to make database connection</h1>');
 		}
 		
 	if($install== false){
@@ -1151,7 +1149,7 @@ if(file_exists('config.php')){
 		$cpermalink = $prefix.'cpermalink';		
 		}
 		else{
-			die('Error to make a connection.');
+			die('Error to make connection.');
 			
 		}
 		

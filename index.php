@@ -20,7 +20,6 @@
 	*
 	*/
 	define("INCLUDE_THEME",true);
-	//define("MODE",'DEVELOPMENT');
 	
 	
 	/*
