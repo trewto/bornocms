@@ -39,7 +39,7 @@
 			- disabled social link of a user.
 			- added demo user for the email bornocms@gmail.com in jsc_admin theme
 			
-			
+			2
 	
 	*/	
 ?>
