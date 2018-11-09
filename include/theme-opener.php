@@ -305,7 +305,7 @@ $post_id= mysqli_escape($_GET['p']);
 		if(isset($_GET['ref'])){
 			notify_delete($_GET['ref']);
 		}
-		 // visit_count_progress($post_id);
+		  visit_count_progress($post_id);
 		  $function_page = 'single';
 	}
 

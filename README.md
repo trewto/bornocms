@@ -1,150 +1,22 @@
 Borno CMS
 ================
-Borno is an open source content management system
+Borno is a content management system
 
 Feature
 -------------
-
-Dashboard
-
-    Responsive admin panel
-    Jquery menu
-    User friendly
-
-Content :
-
-    Adding or managing content
-    Adding or managing doc
-    Adding or managing category
-    Pageview of content
-    Tinymce Editor
-    Ck Editor
-
-Content's support :
-
-    Edit
-    Password
-    Comment setting
-    Privacy (Public/Member of this site/only me)
-    Content type (Draft/public/pending)
-    category
-    Trash
-    Delete
-    permalink/slug
-
-User :
-
-    Adding user
-    Manage user
-    User roles
-    7 deafult roles
-    user capabilites
-    Managing user information
-    User log
-    Profile setting
-    Manage Last login info
-    About
-    Facebook username
-    twitter username
-
-Site Setting
-
-    Site Name
-    Site Description  
-    Site Email
-    Post Approvel System
-    contactfrom System  
-    post_revision System
-    TimeZone
-    Defult Role 
-    User can register    
-    Permalink ?  Dynamic or basic url
-    Post on page
-
-Comment
-
-    Comment
-    Notification
-
-Notification
-
-    Your content
-    Content that you are in comment in
-
-Theme
-
-    Upload Theme
-    Manage Theme
-    Active / Deactive
-    Delete
-
-Plugin
-
-    Upload Plugin
-    Manage Plugin
-    Active / Deactive
-    Delete
-
-Frontend Pages:
-
-    index
-    category
-    user profie
-    single content
-    document
-    search page
-    404 error page
-
-Widget
-
-    Add widget on sepific sidebar
-    Remove widget
-    Bulit in widget
-
-ReadyMade widget
-
-    Last Comment
-    Popular Content
-    Lasted Content
-    Document List
-    User Panel
-    Search Box
-    Category List
-    Lasted Content Titles
-    Popular content titles
-
-Menu
-
-    Parent Menu
-    Two level deep sub menu
-
-Photos 
-
-    Manage photo
-    Upload photo
-    Delete photo
-    photo capabilities
-    Gallery
-
-
-
-Also:
-
-    GOOGLE ALALYTIC
-    RSS FEED
-    BULID IN CONTACT FORM
-    CAPTCHA
-    SEO
-    SECURE
-    REGISTRATION WITH MAIL VERIFICATION
-    UPGRADED
-    DEVELOPER FRIENDLY
-    USER FRIENDLY
-    PERMALINK FRIENDLY
-    SEO FIRENDLY
-
-
-
+Content Management,
+Document Management,
+User Management,
+Category Management,
+Editor Management,
+Responsive admin panel,
+Comment Management,
+Notification Management,
+Theme Management,
+Plugin Management,
+Widget Management,
+Menu Management,
+Photos Management
 
 Require
 -------------
@@ -170,6 +42,8 @@ http://yourdirectroy/admin/
 
 
 
+Don't Forget to say thanks
+
 
 -----------------------------
 You can change admin panel theme from admin/index.php , Line 116
@@ -181,5 +55,6 @@ Download Plugins and Themes
 Themes and plugins are available in here  - 
 http://goo.gl/iH3OSA <br>
 
-Documentation and lasted news on :  http://bornocms.blogspot.com
+Documentation for developer and lasted news on :  http://bornocms.blogspot.com
 
+=======

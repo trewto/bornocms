@@ -5,8 +5,6 @@
 */
 if(file_exists('../config.php')){
 	include('../config.php');
-	
-	
 }
 else{
 	header('Location:../install.php');

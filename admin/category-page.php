@@ -3,7 +3,7 @@
 *	This is the category page
 *	Editor Can See all of the category in this page
 */
-if(!user_can('edit_category')){borno_die("Your can not access this");}
+if(!user_can('edit_category')){borno_die("Your Can not access this");}
 
 
 //the query
@@ -14,13 +14,13 @@ $count  = mysqli_num_rows($query);
 $i = true;
 if(isset($_GET['msg']) && $_GET['msg']=='delete'){
 
-	echo "<div class='alert alert-success'>Successfully deleted</div>";
+	echo "<div class='alert alert-success'>Successfully DELETED</div>";
 }
 
 
 if($count==0){
 	
-		echo 'There is no Category. Please create a new category';
+		echo 'There are no Category .  Please create a new category';
 		$i = false;
 }
 

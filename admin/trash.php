@@ -93,7 +93,7 @@ if(isset($_GET['trashtype']) &&  isset($_GET['id'])){
 					}
 				}
 				else{
-					borno_die( 'You can trash nothing' );
+					borno_die( 'You can not trash anything' );
 				}
 				
 				
