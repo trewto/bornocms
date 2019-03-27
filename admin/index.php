@@ -119,3 +119,6 @@ include('theme/'.$theme.'/header.php');
 //footer php 
 include('theme/'.$theme.'/home.php');
 include('theme/'.$theme.'/footer.php');
+
+
+//echo $total_borno_query;
