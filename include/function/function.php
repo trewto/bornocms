@@ -138,3 +138,39 @@ if(!isset($_SESSION)){
 	require_once('color-selector.php');
 	require_once('about-page.php');
 	require_once('optional_field.php');
+
+	
+	$loginuserinformation = array();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	if(user_logged_in()){
+	
+	
+		if(session_login()){
+			$email = base64_decode($_SESSION[$dbconnect['LOGKEY_A']])	;//email
+			$password = $_SESSION[$dbconnect['LOGKEY_B']]	;//password
+			$query = borno_query("SELECT * FROM prefix_user WHERE email='".mysqli_escape($email)."' and password='".mysqli_escape($password)."'");
+			//echo $count = mysqli_num_rows($query);
+			$row = mysqli_fetch_array($query);
+			
+		}
+		else if(cokkie_login()){
+			$email = base64_decode($_COOKIE[$dbconnect['LOGKEY_A']])	;//email
+			$password = $_COOKIE[$dbconnect['LOGKEY_B']]	;//password
+			$query = borno_query("SELECT * FROM prefix_user WHERE email='".mysqli_escape($email)."' and password='".mysqli_escape($password)."'");
+			//echo $count = mysqli_num_rows($query);
+			$row = mysqli_fetch_array($query);
+
+		}
+		
+		$loginuserinformation = $row;
+			
+	}

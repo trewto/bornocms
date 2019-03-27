@@ -31,4 +31,5 @@
 	 *
 	 */
 	include('functions.php');
-	 
+	 //echo $total_borno_query;
+	//var_dump($borno_query_debug);
