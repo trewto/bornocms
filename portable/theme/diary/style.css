@@ -1,0 +1,148 @@
+/*
+Theme Name: Diary
+Author: Arnob Roy
+
+*/
+@font-face {
+  font-family: 'open-san';
+  font-style: normal;
+  font-weight: 400;
+  src: local('open-san'), local('open-san'), url(fonts/open-san.woff) format('woff');
+}
+body , input , textarea, body textarea{
+  font-family: 'open-san',Siyam Rupali;
+
+}
+
+body textarea {
+     background: url("notebook.png") repeat scroll 0% 0% transparent;
+   
+     border-radius: 0px;
+     font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+     font-size: 11px;
+   /*  font-weight: 700;
+     */font-weight: 500;
+     line-height: 24px;
+     margin-bottom: 20px;
+     padding: 5px 0px;
+     resize: vertical;
+     width: 100%;
+	 padding:5px;
+	
+}
+
+
+.view, #contentarea{
+  font-size: 100%;
+     background: url("notebook.png") repeat scroll 0% 0% transparent;
+     /*border-bottom: 2px solid;
+     */border-radius: 0px;
+     font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+     font-size: 13px;
+    /* font-weight: 700;
+     */line-height: 24px;
+     margin-bottom: 20px;
+     padding: 5px 0px;
+     resize: vertical;
+	 padding:15px;
+	 padding-top:0px;
+	/* width: 750px; */
+	 border: 0px none;
+     font-size: 100%;
+
+	 
+}
+
+html, body, div, label, textarea {
+     border: 0px none;
+     font-size: 100%;
+     margin: 0px;
+     outline: 0px none;
+     padding: 0px;
+    
+}
+
+textarea{
+ padding-left: 15px;
+	 padding-right: 15px;
+}
+
+body{
+	background:white;
+	/*background:url("pen-notebook.jpg") fixed;
+*/}
+
+textarea:hover , textarea:focus{
+	box-shadow:none;
+}
+a:hover{   text-decoration: none;}
+
+
+a, a:visited {
+   text-decoration: none;
+
+}
+a:hover, a:focus { color: #34393A; }
+p a, p a:visited { line-height: inherit; }
+.view p{margin:0 0 24px}
+
+
+
+
+
+/* Comment */
+.avatar {
+     float: left;
+     overflow: hidden;
+}
+
+.comment-data {
+     overflow: hidden;
+}
+
+.comment li {
+     list-style:none;
+     margin-bottom:5px;
+     padding: 3px;
+}
+.comment-content{
+	margin:0 0 0 75pt;
+}
+
+.ray {
+     background: none repeat scroll 0% 0% red;
+     margin-left: 75px;
+     margin-top: 10px;
+     position: relative;
+}
+.ray span.arrow {
+     border-bottom: 24px solid #FFFFFF;
+     border-right: 25px solid #EFEFEF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 23px;
+     width: 0pt;
+}
+.ray span.arrows {
+     border-right: 25px solid #EFEFEF;
+    border-top: 24px solid #FFFFFF;
+     height: 1pt;
+     left: 0px;
+     position: absolute;
+     top: 0px;
+     width: 0pt;
+}
+
+.comment-content{
+	border:1px solid #f1f1f1;
+	min-height:45px;
+	padding:12px;
+}
+
+.avatar{
+	float:left;
+	width:60px;
+	height:60px;
+}
+

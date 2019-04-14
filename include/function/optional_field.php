@@ -107,7 +107,7 @@ function create_metas($field,$value,$type,$type_id){
 function update_metas($id){
 	
 	global $POST_DOC_OPTIONAL_INPUT;
-
+//var_dump($POST_DOC_OPTIONAL_INPUT);
 	
 	foreach($POST_DOC_OPTIONAL_INPUT as $pd){
 	
@@ -116,7 +116,7 @@ function update_metas($id){
 	 if(isset($_POST[$field])){
 			//if exits than update
 			if(get_meta($field ,$id)){
-				borno_query("UPDATE borno_meta SET `value` = '{$_POST[$field]}' WHERE type_id=$id");
+				borno_query("UPDATE borno_meta SET `value` = '{$_POST[$field]}' WHERE type_id=$id and field='{$field}'");
 			}else{
 			//if not exists than create
 				
@@ -125,7 +125,7 @@ function update_metas($id){
 			}
 		}
 	}
-	
+
 	
 
 
