@@ -21,6 +21,10 @@ if(!user_can('manage_site')){
 if(isset($_POST['submit'])){
 		
 		
+		 if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+			borno_die( 'Maybe someone is trying to access this page!');
+		}
+		
 		$up = true;
 
 		
@@ -341,5 +345,7 @@ if(isset($updatewrong)){
 	</tr>
 <tbody>
 </table>
+			<input type="hidden" name="CSRFToken"
+value="<?php echo loginuserinfo("active_key"); ?>">
 	<input type="submit" name="submit" class="btn btn-success" value="Update" />
 </form>

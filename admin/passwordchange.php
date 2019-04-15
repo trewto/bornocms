@@ -10,11 +10,16 @@
 $user_id = loginuserinfo('id');;
 
 if(isset($_POST['submit'])){
-
+	 if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+			borno_die( 'Maybe someone is trying to change your password');
+		}
+		
 	//check input
 	if(!isset($_POST['newpassword'])){borno_die('Something is going wrong.');}
 	if(!isset($_POST['renewpassword'])){borno_die('Something is going wrong.');}
-	
+	 if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+			borno_die( 'Maybe someone is trying to change your password');
+		}
 	
 	//check mewpassword length
 	if(strlen($_POST['newpassword'])<8 or 12<strlen($_POST['newpassword'])){
@@ -86,6 +91,8 @@ function correctpass(){
                 </tr>
               </tbody>
             </table>
+				<input type="hidden" name="CSRFToken"
+value="<?php echo loginuserinfo("active_key"); ?>">
 	<input type="submit" class="btn btn-primary" name="submit" value="Submit" onclick="return correctpass()"/>
 
 </form>
