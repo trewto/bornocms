@@ -40,6 +40,8 @@ if(isset($_POST['submit'])){
 		else if(empty($_POST['username'])){
 			borno_die( 'Invalid username');
 				
+		}else if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+			borno_die( 'Maybe someone is trying to create a admin user');
 		}
 		else{
 			//progress
@@ -230,5 +232,7 @@ $de_level = get_the_option('user_defult_level');
 			</tr>
 		</tbody>
     </table>
+	<input type="hidden" name="CSRFToken"
+value="<?php echo loginuserinfo("active_key"); ?>">
 	<input type="submit" name="submit" value="Add User" class="btn btn-primary" />
 </form>

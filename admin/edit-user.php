@@ -37,7 +37,9 @@ if(filter_var($user_id, FILTER_VALIDATE_INT)){
 				if(!isset($_POST['name'])){ borno_die('Something is crazy');}//check the name field
 				if(!isset($_POST['about'])){ borno_die('Something is crazy');}//check the about field
 				//if(!isset($_POST[''])){ borno_die('Something is crazy');}
-			
+			if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+				borno_die( 'Maybe someone is trying to create a admin user');
+			}
 			
 				if(isset($_POST['user_id']) && isset($_POST['active_key'])){
 					$id= $_POST['user_id'];
@@ -228,6 +230,10 @@ with (thisform)
 			</table>
 <input type="hidden" name="user_id" value="<?php echo $user_id_give ;?>">
 <input type="hidden" name="active_key" value="<?php echo $user_key_give ;?>">
+
+
+<input type="hidden" name="CSRFToken"
+value="<?php echo loginuserinfo("active_key"); ?>">
 			<input type="submit" name="submit" value="Update" class="btn"/>
 			</form>
 			
