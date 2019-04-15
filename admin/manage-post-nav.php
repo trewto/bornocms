@@ -284,7 +284,7 @@ while($row = mysqli_fetch_array($query)){
 		
 		//checking content status
 		if($row['post_status']=='trash'){
-			echo '<td><a class="btn btn-danger" onclick="return confirm_to_del();" href="del.php?type=post&id='.$row['id'].'">Delete</a> <a class="btn btn-success" href="trash.php?restoretype=post&id='.$post_id .'">Restore</a></td>';
+			echo '<td><a class="btn btn-danger" onclick="return confirm_to_del();" href="del.php?type=post&id='.$row['id'].'&CSRFToken='.loginuserinfo('active_key').'">Delete</a> <a class="btn btn-success" href="trash.php?restoretype=post&id='.$post_id .'">Restore</a></td>';
 		}
 		else{	
 			echo '<td><a href="'.admin_url().'/?pages=editor&edit_id='.$row['id'].'">EDIT</a></td>';

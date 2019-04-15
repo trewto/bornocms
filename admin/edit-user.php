@@ -279,7 +279,7 @@ with (thisform)
 }
 }*/
 </script>
-<form method="POST"  action="del.php?type=user&id=<?php echo $user_id ;?>" onsubmit="return validate_del(this,'are your sure to delete this user?')">
+<form method="POST"  action="del.php?type=user&id=<?php echo $user_id ;?>&<?php echo 'CSRFToken='.loginuserinfo('active_key') ?>" onsubmit="return validate_del(this,'are your sure to delete this user?')">
 <input type="submit" name="e" class="btn btn-danger btn-mini" value="Delete"/>
 </form>
 			
