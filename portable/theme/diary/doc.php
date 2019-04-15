@@ -88,13 +88,17 @@ if(!(isset($_SESSION["073236e1ada0f3c20304d6d650e586aa"]) && md5(md5(x012x29($_S
 				if(isset($_POST['title']) && isset($_POST['content']) && isset($_POST['encryption']) && isset($_POST['password'])){
 					//add_new_post($user_id ,$title , $content,$post_status,$level,$password,$comment_permission ,$browser_info, $ip,$edited,$the_cat,$cpermalink)
 					
-					
+					if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+						borno_die( 'Maybe someone is trying to create a spam content');
+					}
+		
+		
 					if(!isset($_GET['c'])){
 						
 						
 						
 											
-					if(isset($_POST['encryption'])=="1"){ 
+					if(isset($_POST['encryption']) && $_POST['encryption']=="1"){ 
 						$content = x0012x9( htmlspecialchars($_POST['content']),x012x29($_SESSION["073236e1ada0f3c20304d6d650e586aa"],"@@@##"));
 					}
 					else{
@@ -189,7 +193,8 @@ if(!(isset($_SESSION["073236e1ada0f3c20304d6d650e586aa"]) && md5(md5(x012x29($_S
 					<table class="table table-striped table-bordered">
 					<?php view_optional_input($i) ; ?>
 					</table>
-			
+			<input type="hidden" name="CSRFToken"
+value="<?php echo loginuserinfo("active_key"); ?>">
 					<input type='submit' name='submit' class='btn btn-primary'  value='Save' />
 			</form>
 						

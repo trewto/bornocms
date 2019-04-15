@@ -99,7 +99,7 @@ function get_meta_by_id($id){
 
 function create_metas($field,$value,$type,$type_id){
 	$sql = "INSERT INTO borno_meta (`id`, `field`, `value`, `type`, `type_id`) VALUES (NULL, '$field', '$value', '$type', '$type_id');";
-	$query = borno_query($sql,1,1);
+	$query = borno_query($sql);
 
 }
 

@@ -19,7 +19,7 @@ body textarea {
    
      border-radius: 0px;
      font-family: 'Open Sans',Arial,Helvetica,sans-serif;
-     font-size: 11px;
+     font-size: 17px;
    /*  font-weight: 700;
      */font-weight: 500;
      line-height: 24px;
@@ -38,7 +38,7 @@ body textarea {
      /*border-bottom: 2px solid;
      */border-radius: 0px;
      font-family: 'Open Sans',Arial,Helvetica,sans-serif;
-     font-size: 13px;
+     font-size: 17px;
     /* font-weight: 700;
      */line-height: 24px;
      margin-bottom: 20px;
@@ -48,7 +48,7 @@ body textarea {
 	 padding-top:0px;
 	/* width: 750px; */
 	 border: 0px none;
-     font-size: 100%;
+    
 
 	 
 }
