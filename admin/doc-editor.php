@@ -307,7 +307,7 @@ with (thisform)
 }
 }
 </script>
-<form method="POST"  action="del.php?type=doc&id=<?php echo $doc_id ;?>" onsubmit="return validate_form(this)">
+<form method="POST"  action="del.php?type=doc&id=<?php echo $doc_id ;?>&<?php echo 'CSRFToken='.loginuserinfo('active_key') ?>" onsubmit="return validate_form(this)">
 <input type="submit" name="e" class="btn btn-danger btn-mini" value="Delete"/>
 </form>
 

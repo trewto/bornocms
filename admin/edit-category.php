@@ -19,6 +19,12 @@ if(!is_exists_cat($_GET['id'])){
 else{
 	///saved action ()
 	if(isset($_POST['submit']) & isset($_POST['catname']) & isset($_POST['catdes']) & isset($_POST['thecatid'])){
+	
+		 if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+			borno_die( 'Maybe someone is trying to access it');
+		}
+		
+	
 		if(is_exists_cat($_POST['thecatid'])){
 			if(!empty($_POST['catname'])){
 				$catname= $_POST['catname'];
@@ -76,7 +82,9 @@ else{
 	<label for="slug">Slug</label>
 	<input id="slug" name="slug"  type="text" value="<?php echo cat_permalink($_GET['id']); ?>" /><br>
 	
-	
+			
+			<input type="hidden" name="CSRFToken"
+value="<?php echo loginuserinfo("active_key"); ?>">
 	<input type="submit" class="btn btn-primary" name="submit" value="Save Change"/>
 	<?php if(user_can('delete_category')  and $_GET['id']!=1){ ?>
 	<a href="#deletethis" role="button" class="btn btn-danger" data-toggle="modal">Delete this cetagory</a>
@@ -130,7 +138,7 @@ else{
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<?php echo '<a href="del.php?type=cat&id='.$_GET['id'].'" class="btn btn-danger">Delete this </a>';//trash link ?>
+					<?php echo '<a href="del.php?type=cat&id='.$_GET['id'].'&CSRFToken='.loginuserinfo('active_key').'" class="btn btn-danger">Delete this </a>';//trash link ?>
 				</div>
 			</div>
 		</div>

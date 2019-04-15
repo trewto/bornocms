@@ -256,7 +256,7 @@ while($row = mysqli_fetch_array($query)){
 			if(user_can('restore_comment')){
 				echo '<td> <a class="btn btn-success" href="trash.php?restoretype=comment&id='.$row['id'].'">Restore This</a>
 				
-								<a class="btn btn-danger" href="del.php?type=comment&id='.$row['id'].'">Delete this</a>
+								<a class="btn btn-danger" href="del.php?type=comment&id='.$row['id'].'&CSRFToken='.loginuserinfo('active_key').'">Delete this</a>
 
 				</td>';		
 			}

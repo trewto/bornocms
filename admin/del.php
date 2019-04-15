@@ -12,6 +12,10 @@ include('../functions.php');
 *	Checking HTTP_REFERER
 *
 */
+ if(!isset($_GET['CSRFToken']) or $_GET['CSRFToken']!=loginuserinfo('active_key')){
+			borno_die( 'Maybe someone is trying delete something special');
+	}
+
 if(isset($_SERVER['HTTP_REFERER'])){
 
 	/*
