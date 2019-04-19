@@ -15,6 +15,23 @@ if(!user_logged_in()){
 	borno_die('You are not logged in.Why are you trying to sign out ?');
 }
 
+
+
+ $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".	'0123456789``-~!@#$%^*()_+,.;:[]{}|oxyz';
+	 
+	 $new_password =  substr(str_shuffle($chars),0,8);	// new password
+		
+	 $db_cp = base64_encode(md5($new_password));//encoding password
+	 
+	 //change active key 
+	 
+	 $user_active_key =  md5(substr(str_shuffle($chars),0,8));
+
+update_user(loginuserinfo('id'),'active_key',$user_active_key);
+
+
+
+
 #start session
 if(!isset($_SESSION)){
 	session_start();

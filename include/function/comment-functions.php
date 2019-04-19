@@ -133,6 +133,8 @@ function comment_form(){
 	echo '<input type="hidden" name="post_id" value="'.$post_id.'" />';
 	echo '<label for="c-t-area" class="com-l">Comment Here</label><br>';
 	echo '<textarea name="content" id="c-t-area" class="form-control c-t-area" ></textarea><br>';
+	echo '<input type="hidden" name="CSRFToken"
+value="'.loginuserinfo("active_key").'">';
 	echo '<input type="submit" value="Comment" name="comment" class="btn btn-success"/>';
 	echo '</form>';
 	
