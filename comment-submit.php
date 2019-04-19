@@ -24,7 +24,10 @@
 		borno_die('Why are you trying this? You have invalid refer.'); //die
 	}
 
-	
+		
+		if(!isset($_POST['CSRFToken']) or $_POST['CSRFToken']!=loginuserinfo('active_key')){
+			borno_die( 'Maybe someone is trying to access this page!');
+		}
 	
 	
 	/*
