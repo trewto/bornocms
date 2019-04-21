@@ -95,13 +95,13 @@ if(get_the_post($_GET['p'],'comment_permission')=='true'){
 			comment_form();
 		}
 		else{
-			echo 'You cant not add comment';
+			//echo 'You cant not add comment';
 		}
 	}
 	else{
-		echo 'You must be logged in to add comment in this content';
+		//echo 'You must be logged in to add comment in this content';
 	}	
 }
 else{
-	echo 'You can not add comment in this post';
+	//echo 'You can not add comment in this post';
 }

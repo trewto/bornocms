@@ -12,7 +12,7 @@
 
 	<!-- bootstrap css-->
 	 <link href="<?php echo theme_directory() ;?>/css/bootstrap.min.css" rel="stylesheet">
-	<link rel='stylesheet' href="<?php echo theme_directory() ;?>/css/bootstrap-responsive.css">
+	
 	<!-- bootstrap css end-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
