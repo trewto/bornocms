@@ -18,7 +18,11 @@
 	 *
 	 */
 	if(user_logged_in()){
-		die('Ops! You have already an account! Why you want to another ?');
+		borno_die('Ops! You have already an account! Why you want to another ?');
+		exit();
+	}
+	if(get_the_option("user_can_signup")!='true'){
+		borno_die("You can not register.");
 		exit();
 	}
 	

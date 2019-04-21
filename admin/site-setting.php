@@ -349,3 +349,13 @@ if(isset($updatewrong)){
 value="<?php echo loginuserinfo("active_key"); ?>">
 	<input type="submit" name="submit" class="btn btn-success" value="Update" />
 </form>
+<?php 
+if(isset($updated)){
+	if($updated){
+			borno_die("Settings are updated","Updated");
+	}
+}
+
+?>
+
+

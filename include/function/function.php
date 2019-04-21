@@ -59,7 +59,7 @@ if(!isset($_SESSION)){
 	*	include the function of login
 	*
 	*/
-	require_once('login-functions.php');
+	
 	
 	/*
 	*
@@ -121,6 +121,8 @@ if(!isset($_SESSION)){
 	*
 	*	include class user function
 	*/
+	require_once('login-functions.php');
+	
 	require_once('class.user.php');
 	/*
 	*
@@ -137,6 +139,7 @@ if(!isset($_SESSION)){
 	require_once('menu_system.php');
 	require_once('color-selector.php');
 	require_once('about-page.php');
+
 	require_once('optional_field.php');
 
 	
