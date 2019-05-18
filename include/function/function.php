@@ -116,7 +116,7 @@ if(!isset($_SESSION)){
 	*
 	*	include captcha function
 	*/
-	require_once('captcha.func.php');
+	//require_once('captcha.func.php');
 	/*
 	*
 	*	include class user function

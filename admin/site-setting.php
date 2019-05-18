@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
 		if(!isset($_POST['site_description'])){borno_die('Something is wrong');}
 		if(!isset($_POST['site_email'])){borno_die('Something is wrong');}
 		if(!isset($_POST['user_defult_level'])){borno_die('Something is wrong');}
-		if(!isset($_POST['canregister'])){borno_die('Something is wrong');}
+		if(!isset($_POST['user_can_signup'])){borno_die('Something is wrong');}
 		if(!isset($_POST['site_time'])){borno_die('Something is wrong');}
 		if(!isset($_POST['post_approvel'])){borno_die('Something is wrong');}
 		if(!isset($_POST['contactfrom'])){borno_die('Something is wrong');}
@@ -84,7 +84,7 @@ if(isset($_POST['submit'])){
 		
 		
 		/* //	Checking some condition	//*/
-		if(isset($_POST['canregister']) && isset($_POST['user_defult_level']) && isset($_POST['site_time'])){
+		if(isset($_POST['user_can_signup']) && isset($_POST['user_defult_level']) && isset($_POST['site_time'])){
 		}
 		else{
 			$up = false;
@@ -307,7 +307,7 @@ if(isset($updatewrong)){
 		$array = array('true','false');
 		$valuearray = array('Enable','Disable');
 
-		echo _site_option_auto_update_option_display('canregister' , $array,$valuearray ,true,false);
+		echo _site_option_auto_update_option_display('user_can_signup' , $array,$valuearray ,true,false);
 		?>
 	</td>
 </tr>
