@@ -344,7 +344,7 @@ echo '<input name="back"  type="hidden" value="'.htmlspecialchars($_POST['back']
 echo ' <a class="btn btn-mini btn-primary" href="sign-in.php?forget=true">Forget Password?</a> ';
 if(get_the_option('user_can_signup')=='true'){
 
-echo ' <a class="btn btn-mini btn-warning" href="sign-up.php">Register</a>';
+	echo ' <a class="btn btn-mini btn-warning" href="sign-up.php">Register</a>';
 
 }
 echo '<br><br>';
